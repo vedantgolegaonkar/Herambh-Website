@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&amp;family=Inter:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-surface": "#dfe2f1",
+                    "surface-dim": "#0f131d",
+                    "on-tertiary": "#60130d",
+                    "secondary-fixed": "#8efb88",
+                    "surface-variant": "#313540",
+                    "on-primary-container": "#004b1e",
+                    "on-secondary": "#003908",
+                    "primary-fixed": "#6bff8f",
+                    "surface": "#0f131d",
+                    "error": "#ffb4ab",
+                    "on-error-container": "#ffdad6",
+                    "inverse-primary": "#006e2f",
+                    "outline-variant": "#3d4a3d",
+                    "on-secondary-fixed": "#002203",
+                    "surface-container-lowest": "#0a0e18",
+                    "surface-container": "#1c1f2a",
+                    "inverse-on-surface": "#2c303b",
+                    "background": "#0f131d",
+                    "secondary-fixed-dim": "#73dd6f",
+                    "surface-tint": "#4ae176",
+                    "primary": "#4be277",
+                    "on-surface-variant": "#bccbb9",
+                    "on-tertiary-container": "#76231b",
+                    "primary-fixed-dim": "#4ae176",
+                    "tertiary": "#ffb5ab",
+                    "on-secondary-container": "#c6ffbc",
+                    "secondary": "#73dd6f",
+                    "tertiary-container": "#ff8b7c",
+                    "on-tertiary-fixed": "#410001",
+                    "surface-container-high": "#262a35",
+                    "tertiary-fixed-dim": "#ffb4a9",
+                    "secondary-container": "#007f1e",
+                    "on-primary-fixed": "#002109",
+                    "primary-container": "#22c55e",
+                    "surface-container-highest": "#313540",
+                    "error-container": "#93000a",
+                    "outline": "#869585",
+                    "on-tertiary-fixed-variant": "#7f2a21",
+                    "inverse-surface": "#dfe2f1",
+                    "tertiary-fixed": "#ffdad5",
+                    "on-secondary-fixed-variant": "#005310",
+                    "on-primary": "#003915",
+                    "surface-bright": "#353944",
+                    "on-error": "#690005",
+                    "on-primary-fixed-variant": "#005321",
+                    "on-background": "#dfe2f1",
+                    "surface-container-low": "#171b26"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "1.5rem",
+                    "2xl": "2rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #0f131d; color: #dfe2f1; }
+        .font-headline { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-nav { background: rgba(15, 19, 29, 0.7); backdrop-filter: blur(12px); }
+        .text-gradient { background: linear-gradient(to right, #4be277, #73dd6f); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .primary-gradient { background: linear-gradient(135deg, #22c55e 0%, #007f1e 100%); }
+        .asymmetric-shape { clip-path: polygon(10% 0, 100% 0%, 100% 100%, 0% 100%); }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-slate-950/70 backdrop-blur-xl shadow-2xl shadow-black/20">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="flex items-center"><img alt="Herambh Software" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0ujV4MN4Jt5ffMvYIKIfR59aJypSv83jKWs8t3ovONGtzL1IjJUbHAcEGB8NAtPzW1m2vkwt8ad2XiZ6u-YO3G_dQcSHQWrnKlIC6qA5M_Kslr8sMyFcZ5NZtbYHV5pO_YkRxHuOeVq4XR5SQRtJ1FyKC_8fxbD5md8ZsLCOUgE3sMMEfcBA6GrE7vfCUSG-BJDnUXf7mxSnQ8RclZrB8e0rmYvUgb0RtVdwFH7EEskUt0igLYIA5G-alR2dM1bR69RpB85mGgUdRQo"/></div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-green-500 border-b-2 border-green-500 pb-1 text-sm tracking-wide font-medium" href="#">Home</a>
+<a class="text-slate-300 hover:text-white transition-colors text-sm tracking-wide font-medium" href="#">Services</a>
+<a class="text-slate-300 hover:text-white transition-colors text-sm tracking-wide font-medium" href="#">Portfolio</a>
+<a class="text-slate-300 hover:text-white transition-colors text-sm tracking-wide font-medium" href="#">About</a>
+<a class="text-slate-300 hover:text-white transition-colors text-sm tracking-wide font-medium" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-slate-300 cursor-pointer hover:text-white transition-colors">dark_mode</span>
+<button class="primary-gradient text-on-primary px-6 py-2.5 rounded-full text-sm font-semibold hover:scale-105 transition-transform duration-200">
+                    Get a Quote
+                </button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative pt-32 pb-24 lg:pt-48 lg:pb-40 overflow-hidden">
+<div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_-20%,#004b1e44,transparent_50%)]"></div>
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+<div class="lg:col-span-7">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-8">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="text-primary text-[10px] font-bold uppercase tracking-widest font-label">The Future of Software Delivery</span>
+</div>
+<h1 class="text-5xl md:text-7xl font-bold font-headline leading-[1.1] mb-8 tracking-tight">
+                    Seamless Engineering <br/>
+<span class="text-gradient">Precision Vitality.</span>
+</h1>
+<p class="text-lg md:text-xl text-on-surface-variant max-w-2xl mb-12 leading-relaxed font-body">
+                    Empowering modern enterprises with high-impact <span class="text-on-surface font-medium">AI Automation</span>, scalable <span class="text-on-surface font-medium">Web/Mobile Platforms</span>, and architectural excellence that drives sustainable growth.
+                </p>
+<div class="flex flex-wrap gap-4">
+<button class="primary-gradient text-on-primary px-10 py-4 rounded-2xl text-lg font-bold hover:scale-105 transition-transform duration-300 shadow-xl shadow-primary/20">
+                        Start a Project
+                    </button>
+<button class="bg-surface-container-high text-on-surface px-10 py-4 rounded-2xl text-lg font-bold hover:bg-surface-container-highest transition-colors border border-white/5">
+                        View Portfolio
+                    </button>
+</div>
+</div>
+<div class="lg:col-span-5 relative">
+<div class="relative z-10 rounded-2xl overflow-hidden shadow-2xl shadow-black/40 border border-white/5 bg-surface-container-low p-2">
+<img alt="Software Development" class="rounded-xl w-full h-[500px] object-cover" data-alt="close up of high-end dark laptop keyboard with emerald green glowing code on screen in a professional minimalist studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBt56rU0e_f0o-pMQK9d_Ql4ejWRqE6_bjb7D3EdjrpGf7LzTsNS1qlzgFEYWvfRRWVFo92n-KWJgnBIuaHzSfM_97C4bBwtvl1HNpwLYQKis-8wB8rxQJjuSWDo8JKnGrK_0fIMy2sDJ8G_z_Ej4OuE8iBbE3YWg3dpdb5r-l-9CRV4MRzRiY9uOxnKFHzEX7bm2SzwIkCv3UL8w9a-Mz1bk8-0166Fu1WDGqQiuXfUySKhRmO0nBrQ1So5Sp0AxMN6KQXBGMsfdRb"/>
+</div>
+<div class="absolute -top-10 -right-10 w-40 h-40 bg-primary/10 rounded-full blur-3xl"></div>
+<div class="absolute -bottom-10 -left-10 w-60 h-60 bg-secondary-container/10 rounded-full blur-3xl"></div>
+</div>
+</div>
+</header>
+<!-- Value Prop / Bento Grid -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-8">
+<div class="mb-16">
+<h2 class="text-sm font-bold text-primary uppercase tracking-[0.2em] font-label mb-4">Why Herambh?</h2>
+<h3 class="text-4xl font-bold font-headline">Engineered for Performance.</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Precision -->
+<div class="bg-surface-container-high p-10 rounded-2xl group hover:scale-[1.02] transition-all duration-300 border border-white/5">
+<div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-8 text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">biotech</span>
+</div>
+<h4 class="text-2xl font-bold font-headline mb-4">Precision</h4>
+<p class="text-on-surface-variant leading-relaxed">
+                        Meticulous attention to every line of code, ensuring bug-free delivery and peak performance at scale.
+                    </p>
+</div>
+<!-- Innovation -->
+<div class="bg-surface-container-high p-10 rounded-2xl group hover:scale-[1.02] transition-all duration-300 border border-white/5">
+<div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-8 text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-weight="fill">lightbulb</span>
+</div>
+<h4 class="text-2xl font-bold font-headline mb-4">Innovation</h4>
+<p class="text-on-surface-variant leading-relaxed">
+                        Pushing boundaries with AI-integrated solutions and next-generation frameworks for modern challenges.
+                    </p>
+</div>
+<!-- Scalability -->
+<div class="bg-surface-container-high p-10 rounded-2xl group hover:scale-[1.02] transition-all duration-300 border border-white/5">
+<div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-8 text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">trending_up</span>
+</div>
+<h4 class="text-2xl font-bold font-headline mb-4">Scalability</h4>
+<p class="text-on-surface-variant leading-relaxed">
+                        Architectures built to grow from MVP to millions of users without technical debt or friction.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Overview -->
+<section class="py-24">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div class="max-w-2xl">
+<h2 class="text-sm font-bold text-primary uppercase tracking-[0.2em] font-label mb-4">Core Offerings</h2>
+<h3 class="text-4xl md:text-5xl font-bold font-headline leading-tight">Elite solutions for visionary brands.</h3>
+</div>
+<a class="flex items-center gap-2 text-primary font-bold group" href="#">
+                    View all services
+                    <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Service 1 -->
+<div class="group relative aspect-square bg-surface-container rounded-2xl overflow-hidden">
+<img class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-110 group-hover:opacity-60 transition-all duration-500" data-alt="abstract glowing blue and green neural network connections represent artificial intelligence technology" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-7bR1y1559PmABvEN784ZBt141HDiaq38X28agBpXswKxsfjYcsee1XbW-Dr88E5JhzYsNc1vQN914KzRQrL0s9DfvVnAaJPTU5RmmXJUKDANRSi-68KHBjE63TVtUwHOSIXdd-b4VwBy2FV7gjR9PKwl1lBwNRbsPLfufwbN2KwWOLUgFJrMkCn93yVHT6UmFN5DxdudRimQk5jx9YDlZnIk9t1zus8fBbkpWwJXkC4m_PfnQnHnntDIrIj_w8rUaTEgsu43kMq6"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dim via-transparent to-transparent"></div>
+<div class="absolute bottom-0 p-8">
+<span class="text-primary-fixed-dim font-label text-xs uppercase tracking-widest mb-2 block">Enterprise AI</span>
+<h4 class="text-xl font-bold font-headline">AI Automation</h4>
+</div>
+</div>
+<!-- Service 2 -->
+<div class="group relative aspect-square bg-surface-container rounded-2xl overflow-hidden">
+<img class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-110 group-hover:opacity-60 transition-all duration-500" data-alt="Sleek high-tech mobile devices and tablet displaying vibrant interface designs on a dark table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDITqKAaiIKkDxV6sXJf4PLPANQvqRbqPUBk1uZp21bNwMiRZp2yw59NFv5ulgOEcyKIJUhgllPkg74ybZYJ6I5FCM1BFzE1ANBvx482ueHx6gkVJEJo6VckKBdc9LcRqt9jsyLAji1mCy3lGq4DOF0YJDC2utpkbQGnW3OaiPdscf8hnJlxXRd0exHp0zWOnzRTX08xh9022I39lLl3WVHqxFuDcU0UEtTRmweLKRAPdsgXN81VzrErWvY54CJXfuwqEchSHrQqaSR"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dim via-transparent to-transparent"></div>
+<div class="absolute bottom-0 p-8">
+<span class="text-primary-fixed-dim font-label text-xs uppercase tracking-widest mb-2 block">Cross-Platform</span>
+<h4 class="text-xl font-bold font-headline">Mobile Apps</h4>
+</div>
+</div>
+<!-- Service 3 -->
+<div class="group relative aspect-square bg-surface-container rounded-2xl overflow-hidden">
+<img class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-110 group-hover:opacity-60 transition-all duration-500" data-alt="futuristic dark workspace with multiple monitors showing complex software engineering dashboards and data visualizations" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIsZxLQD69-FvmvAZj3kTB47n-RvpLkYXgSCzZraBmhVOhc8yuHzi6URVSK9xE7tXrv_ZkpruzyM7APXrmXFtdN5PVEg1AsjEE3MTvoBVprxmG9nuU83YGv2Cxi5DxTXtbrwIOJguobVHc79mq-tchXBfHpUSRKxCikooilq1rTlnBoYmGJHZj7g64GZL0oSpXWoDG1SoU1xR50KxdbavdamrABHMSJGdEb1L2LHMNVegpLq8BxOKtz_sq59lohdn0UutbC8IVKZl9"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dim via-transparent to-transparent"></div>
+<div class="absolute bottom-0 p-8">
+<span class="text-primary-fixed-dim font-label text-xs uppercase tracking-widest mb-2 block">High Performance</span>
+<h4 class="text-xl font-bold font-headline">Web Ecosystems</h4>
+</div>
+</div>
+<!-- Service 4 -->
+<div class="group relative aspect-square bg-surface-container rounded-2xl overflow-hidden">
+<img class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-110 group-hover:opacity-60 transition-all duration-500" data-alt="digital representation of global cloud infrastructure with networking lines over a dark world map" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_14ZpDrhGw4cye4gKR_KrYlTF1ifAj_ihuyfQNhSNagkkaYpEQJs_-ziIDx6AZNiP__dYuAWKJCUhePZueLJPkPbFC9zvLP7WmzZlAB4q7lhS1wL3omMZPtERTWSk5uO63hXxYY0dD-Cn2AtznLL-YIc2AB-B57AjyZn3H96i7s9ziOUH597HORqEaNzXM4TqW_mgeSUEUi_DYjcUJCIpEV3X7Wd8JAJzos-vIxnzfIL0O14eVvA-btA64gRu_qGmQdbuqnDhENSv"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dim via-transparent to-transparent"></div>
+<div class="absolute bottom-0 p-8">
+<span class="text-primary-fixed-dim font-label text-xs uppercase tracking-widest mb-2 block">Infrastructure</span>
+<h4 class="text-xl font-bold font-headline">Cloud Solutions</h4>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Brief About Section -->
+<section class="py-24 bg-surface-container-low overflow-hidden">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div class="relative">
+<div class="asymmetric-shape bg-surface-container-high h-[400px] w-full rounded-2xl overflow-hidden relative border border-white/5">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 opacity-60" data-alt="a collaborative team of diverse software developers working in a modern dark-themed creative office space with plants" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBur0pyhb4pPfIj9uKScoM6SkoOrn65O79qOKRIC1OMbPJ2abSjT4Pr638ZpKHN6kot2SHYLFDedd6QHlLJCh4MAnK_NEB3MElvo4ZN-5SVrnEzMkeR8nRRGL-Z3U9uOvudrkzRIzlOnti0jd1L3dKl5lYfZvUtqnlTAikPmcVeX2msJWakyeOkJwalWy_KwSSdyWHJXOlUsHGee173L3bVsl3JNVTrbFTZwZZqCypd5Oht1HTYyMy6a44SWomodX7XorUKqN4tS2tW"/>
+</div>
+<div class="absolute -bottom-6 -right-6 bg-primary p-8 rounded-2xl shadow-xl">
+<span class="text-on-primary font-bold text-4xl block font-headline">10+</span>
+<span class="text-on-primary text-xs uppercase font-label tracking-widest">Years Experience</span>
+</div>
+</div>
+<div>
+<h2 class="text-sm font-bold text-primary uppercase tracking-[0.2em] font-label mb-4">Behind the Code</h2>
+<h3 class="text-4xl font-bold font-headline mb-8">Architects of digital progress.</h3>
+<p class="text-on-surface-variant text-lg leading-relaxed mb-8">
+                        Herambh Software Technologies &amp; Solutions was founded on the belief that software should be as beautiful as it is functional. We don't just build applications; we build competitive advantages for our partners.
+                    </p>
+<p class="text-on-surface-variant text-lg leading-relaxed mb-12">
+                        Our team of elite engineers and designers work at the intersection of business strategy and technical innovation to deliver products that redefine industries.
+                    </p>
+<a class="inline-flex items-center gap-3 bg-white/5 hover:bg-white/10 px-8 py-4 rounded-xl font-bold transition-colors border border-white/10 group" href="#">
+                        Discover Our Story
+                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-slate-950 w-full pt-24 pb-12 border-t border-white/5">
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-4 gap-16 mb-20">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center mb-8"><img alt="Herambh Software" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0ujV4MN4Jt5ffMvYIKIfR59aJypSv83jKWs8t3ovONGtzL1IjJUbHAcEGB8NAtPzW1m2vkwt8ad2XiZ6u-YO3G_dQcSHQWrnKlIC6qA5M_Kslr8sMyFcZ5NZtbYHV5pO_YkRxHuOeVq4XR5SQRtJ1FyKC_8fxbD5md8ZsLCOUgE3sMMEfcBA6GrE7vfCUSG-BJDnUXf7mxSnQ8RclZrB8e0rmYvUgb0RtVdwFH7EEskUt0igLYIA5G-alR2dM1bR69RpB85mGgUdRQo"/></div>
+<p class="text-slate-500 font-body leading-relaxed mb-8">
+                    Defining the next era of enterprise software through precision engineering and vital innovation.
+                </p>
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary/20 transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-sm text-slate-300">public</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary/20 transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-sm text-slate-300">share</span>
+</div>
+</div>
+</div>
+<div>
+<h5 class="text-white font-headline font-semibold mb-8">Solutions</h5>
+<ul class="space-y-4">
+<li><a class="text-slate-500 hover:text-green-500 transition-colors font-body" href="#">AI Automation</a></li>
+<li><a class="text-slate-500 hover:text-green-500 transition-colors font-body" href="#">Cloud Infrastructure</a></li>
+<li><a class="text-slate-500 hover:text-green-500 transition-colors font-body" href="#">Custom Development</a></li>
+<li><a class="text-slate-500 hover:text-green-500 transition-colors font-body" href="#">Digital Strategy</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-white font-headline font-semibold mb-8">Company</h5>
+<ul class="space-y-4">
+<li><a class="text-slate-500 hover:text-green-500 transition-colors font-body" href="#">About Us</a></li>
+<li><a class="text-slate-500 hover:text-green-500 transition-colors font-body" href="#">Careers</a></li>
+<li><a class="text-slate-500 hover:text-green-500 transition-colors font-body" href="#">Portfolio</a></li>
+<li><a class="text-slate-500 hover:text-green-500 transition-colors font-body" href="#">Support</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-white font-headline font-semibold mb-8">Legal</h5>
+<ul class="space-y-4">
+<li><a class="text-slate-500 hover:text-green-500 transition-colors font-body" href="#">Privacy Policy</a></li>
+<li><a class="text-slate-500 hover:text-green-500 transition-colors font-body" href="#">Terms of Service</a></li>
+<li><a class="text-slate-500 hover:text-green-500 transition-colors font-body" href="#">Compliance</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-8 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-slate-500 text-sm font-body">© 2024 Herambh Software Technologies &amp; Solutions. All rights reserved.</p>
+<div class="flex gap-8">
+<a class="text-slate-500 hover:text-green-500 text-sm font-body transition-colors" href="#">Privacy Policy</a>
+<a class="text-slate-500 hover:text-green-500 text-sm font-body transition-colors" href="#">Terms of Service</a>
+<a class="text-slate-500 hover:text-green-500 text-sm font-body transition-colors" href="#">Careers</a>
+<a class="text-slate-500 hover:text-green-500 text-sm font-body transition-colors" href="#">Support</a>
+</div>
+</div>
+</footer>
+</body></html>
