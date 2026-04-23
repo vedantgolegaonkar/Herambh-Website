@@ -1,3 +1,4 @@
+import { Globe, Share2 } from "lucide-react";
 import Link from 'next/link';
 
 export default function Footer() {
@@ -17,14 +18,10 @@ export default function Footer() {
           </p>
           <div className="flex gap-4">
             <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary/20 transition-colors cursor-pointer">
-              <span className="material-symbols-outlined text-sm text-slate-300">
-                public
-              </span>
+              <Globe className="text-sm text-slate-300" />
             </div>
             <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary/20 transition-colors cursor-pointer">
-              <span className="material-symbols-outlined text-sm text-slate-300">
-                share
-              </span>
+              <Share2 className="text-sm text-slate-300" />
             </div>
           </div>
         </div>

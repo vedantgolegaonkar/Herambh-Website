@@ -2,9 +2,15 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useEffect } from 'react';
 
 export default function Navbar() {
   const pathname = usePathname();
+
+  // Ensure the page scrolls to the top on every route change
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   const getNavClass = (path: string) => {
     const isActive = pathname === path;

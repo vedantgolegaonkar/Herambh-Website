@@ -1,3 +1,4 @@
+import { ArrowRight, ExternalLink, MessageSquare } from "lucide-react";
 import Link from "next/link";
 
 export default function Portfolio() {
@@ -55,9 +56,7 @@ export default function Portfolio() {
               </div>
               <button className="flex items-center gap-2 text-white bg-white/10 backdrop-blur-md px-6 py-3 rounded-xl hover:bg-primary hover:text-on-primary transition-all group/btn">
                 <span className="font-semibold">View Demo</span>
-                <span className="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform">
-                  arrow_forward
-                </span>
+                <ArrowRight className="text-sm group-hover/btn:translate-x-1 transition-transform" />
               </button>
             </div>
           </div>
@@ -120,7 +119,7 @@ export default function Portfolio() {
                 <h3 className="text-2xl font-bold text-white">Titan Cloud</h3>
               </div>
               <button className="bg-white/5 border border-white/10 text-white p-3 rounded-full hover:bg-primary transition-colors">
-                <span className="material-symbols-outlined">open_in_new</span>
+                <ExternalLink className="" />
               </button>
             </div>
           </div>
@@ -145,7 +144,7 @@ export default function Portfolio() {
               className="bg-primary text-on-primary font-bold px-10 py-5 rounded-2xl hover:scale-105 transition-transform flex items-center justify-center gap-3 shadow-xl shadow-primary/20"
             >
               Discuss your project
-              <span className="material-symbols-outlined">forum</span>
+              <MessageSquare className="" />
             </Link>
             {/* <Link href="/" className="bg-white/5 backdrop-blur-md text-white font-bold px-10 py-5 rounded-2xl border border-white/10 hover:bg-white/10 transition-all">
               View Portfolio

@@ -1,3 +1,4 @@
+import { AtSign, MapPin, ChevronDown } from "lucide-react";
 export default function Contact() {
   return (
     <main className="pt-32 pb-24 px-6 max-w-[100rem] mx-auto">
@@ -20,9 +21,7 @@ export default function Contact() {
           {/* Contact Info Bento */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="bg-surface-container-low p-8 rounded-2xl group hover:bg-surface-container transition-colors">
-              <span className="material-symbols-outlined text-primary mb-4 text-3xl">
-                alternate_email
-              </span>
+              <AtSign className="text-primary mb-4 text-3xl" />
               <h3 className="text-white font-semibold mb-2">Email Us</h3>
               <p className="text-on-surface-variant text-sm">
                 hello@herambh.tech
@@ -32,9 +31,7 @@ export default function Contact() {
               </p>
             </div>
             <div className="bg-surface-container-low p-8 rounded-2xl group hover:bg-surface-container transition-colors">
-              <span className="material-symbols-outlined text-primary mb-4 text-3xl">
-                location_on
-              </span>
+              <MapPin className="text-primary mb-4 text-3xl" />
               <h3 className="text-white font-semibold mb-2">Office</h3>
               {/* <p className="text-on-surface-variant text-sm">
                 Shivaji Nagar
@@ -178,9 +175,7 @@ export default function Contact() {
               <h3 className="text-white font-medium">
                 How soon can we start a project?
               </h3>
-              <span className="material-symbols-outlined text-slate-500 group-open:rotate-180 transition-transform">
-                expand_more
-              </span>
+              <ChevronDown className="text-slate-500 group-open:rotate-180 transition-transform" />
             </summary>
             <div className="px-6 pb-6 text-on-surface-variant text-sm leading-relaxed">
               Most projects can begin within a few business days after 
@@ -193,9 +188,7 @@ export default function Contact() {
               <h3 className="text-white font-medium">
                 Do you provide support after project delivery?
               </h3>
-              <span className="material-symbols-outlined text-slate-500 group-open:rotate-180 transition-transform">
-                expand_more
-              </span>
+              <ChevronDown className="text-slate-500 group-open:rotate-180 transition-transform" />
             </summary>
             <div className="px-6 pb-6 text-on-surface-variant text-sm leading-relaxed">
               Yes. We provide tiered support and maintenance packages ensuring
@@ -208,9 +201,7 @@ export default function Contact() {
               <h3 className="text-white font-medium">
                 Can you work with our internal team?
               </h3>
-              <span className="material-symbols-outlined text-slate-500 group-open:rotate-180 transition-transform">
-                expand_more
-              </span>
+              <ChevronDown className="text-slate-500 group-open:rotate-180 transition-transform" />
             </summary>
             <div className="px-6 pb-6 text-on-surface-variant text-sm leading-relaxed">
               Absolutely. We can collaborate with your in-house designers, 

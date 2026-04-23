@@ -1,3 +1,4 @@
+import { Microscope, Lightbulb, TrendingUp, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 export default function Home() {
@@ -77,9 +78,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-surface-container-high p-10 rounded-2xl group hover:scale-[1.02] transition-all duration-300 border border-white/5">
               <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-8 text-primary group-hover:scale-110 transition-transform">
-                <span className="material-symbols-outlined text-3xl">
-                  biotech
-                </span>
+                <Microscope className="text-3xl" />
               </div>
               <h4 className="text-2xl font-bold font-headline mb-4">
                 Strategic Execution
@@ -93,9 +92,7 @@ export default function Home() {
 
             <div className="bg-surface-container-high p-10 rounded-2xl group hover:scale-[1.02] transition-all duration-300 border border-white/5">
               <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-8 text-primary group-hover:scale-110 transition-transform">
-                <span className="material-symbols-outlined text-3xl">
-                  lightbulb
-                </span>
+                <Lightbulb className="text-3xl" />
               </div>
               <h4 className="text-2xl font-bold font-headline mb-4">
                 Modern Innovation
@@ -109,9 +106,7 @@ export default function Home() {
 
             <div className="bg-surface-container-high p-10 rounded-2xl group hover:scale-[1.02] transition-all duration-300 border border-white/5">
               <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-8 text-primary group-hover:scale-110 transition-transform">
-                <span className="material-symbols-outlined text-3xl">
-                  trending_up
-                </span>
+                <TrendingUp className="text-3xl" />
               </div>
               <h4 className="text-2xl font-bold font-headline mb-4">
                 Scalable Foundations
@@ -141,9 +136,7 @@ export default function Home() {
               className="flex items-center gap-2 text-primary font-bold group"
             >
               View All Services
-              <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">
-                arrow_forward
-              </span>
+              <ArrowRight className="group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -275,9 +268,7 @@ export default function Home() {
                 className="inline-flex items-center gap-3 bg-white/5 hover:bg-white/10 px-6 py-4 rounded-xl font-bold transition-colors border border-white/10 group"
               >
                 Discover Our Story
-                <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">
-                  arrow_forward
-                </span>
+                <ArrowRight className="group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
           </div>

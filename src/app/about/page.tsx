@@ -1,3 +1,4 @@
+import { Eye, Rocket, PenTool, Globe, ShieldCheck, Mail, ArrowLeft, ArrowRight, Quote } from "lucide-react";
 export default function About() {
   return (
     <main className="pt-24">
@@ -156,9 +157,7 @@ export default function About() {
             <div className="md:col-span-5 bg-surface-container-low border border-white/5 rounded-3xl p-10 md:p-12 relative overflow-hidden group hover:-translate-y-2 transition-all duration-500 shadow-xl hover:shadow-[0_0_40px_rgba(75,226,119,0.1)] h-full flex flex-col justify-center">
               <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 blur-[80px] rounded-full group-hover:bg-primary/20 transition-colors duration-500 pointer-events-none"></div>
               <div className="w-16 h-16 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-8 transform group-hover:rotate-12 transition-transform duration-500">
-                <span className="material-symbols-outlined text-primary text-3xl drop-shadow-[0_0_10px_rgba(75,226,119,0.5)]">
-                  visibility
-                </span>
+                <Eye className="text-primary text-3xl drop-shadow-[0_0_10px_rgba(75,226,119,0.5)]" />
               </div>
               <h2 className="text-3xl font-bold font-headline text-white mb-6">
                 Our Vision
@@ -175,18 +174,14 @@ export default function About() {
               <div className="absolute bottom-0 left-0 w-80 h-80 bg-blue-500/10 blur-[100px] rounded-full opacity-50 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
               <h2 className="text-3xl font-bold font-headline text-white mb-10 flex items-center gap-4 relative z-10">
                 <div className="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center">
-                  <span className="material-symbols-outlined text-primary group-hover:animate-pulse">
-                    rocket_launch
-                  </span>
+                  <Rocket className="text-primary group-hover:animate-pulse" />
                 </div>
                 Our Mission
               </h2>
               <ul className="space-y-6 relative z-10">
                 <li className="flex items-start gap-5 group/item">
                   <div className="w-12 h-12 rounded-2xl bg-surface-container-highest border border-white/10 flex items-center justify-center shrink-0 group-hover/item:border-primary group-hover/item:bg-primary/10 transition-colors duration-300 shadow-inner">
-                    <span className="material-symbols-outlined text-primary text-lg group-hover/item:scale-110 transition-transform">
-                      architecture
-                    </span>
+                    <PenTool className="text-primary text-lg group-hover/item:scale-110 transition-transform" />
                   </div>
                   <span className="text-slate-300 text-lg leading-relaxed pt-2">
                     Build scalable digital products that align technology with
@@ -195,9 +190,7 @@ export default function About() {
                 </li>
                 <li className="flex items-start gap-5 group/item">
                   <div className="w-12 h-12 rounded-2xl bg-surface-container-highest border border-white/10 flex items-center justify-center shrink-0 group-hover/item:border-primary group-hover/item:bg-primary/10 transition-colors duration-300 shadow-inner">
-                    <span className="material-symbols-outlined text-primary text-lg group-hover/item:scale-110 transition-transform">
-                      language
-                    </span>
+                    <Globe className="text-primary text-lg group-hover/item:scale-110 transition-transform" />
                   </div>
                   <span className="text-slate-300 text-lg leading-relaxed pt-2">
                     Help companies leverage AI, automation, and modern platforms
@@ -206,9 +199,7 @@ export default function About() {
                 </li>
                 <li className="flex items-start gap-5 group/item">
                   <div className="w-12 h-12 rounded-2xl bg-surface-container-highest border border-white/10 flex items-center justify-center shrink-0 group-hover/item:border-primary group-hover/item:bg-primary/10 transition-colors duration-300 shadow-inner">
-                    <span className="material-symbols-outlined text-primary text-lg group-hover/item:scale-110 transition-transform">
-                      shield_lock
-                    </span>
+                    <ShieldCheck className="text-primary text-lg group-hover/item:scale-110 transition-transform" />
                   </div>
                   <span className="text-slate-300 text-lg leading-relaxed pt-2">
                     Deliver reliable, secure, and future-ready systems without
@@ -307,7 +298,7 @@ export default function About() {
                 target="_blank"
                 className="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-primary hover:text-white hover:border-primary transition-all text-slate-400"
               >
-                <span className="material-symbols-outlined text-xl">mail</span>
+                <Mail className="text-xl" />
               </a>
             </div>
           </div>
@@ -328,10 +319,10 @@ export default function About() {
             </div>
             <div className="flex gap-4">
               <button className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white hover:bg-primary/20 hover:border-primary hover:text-primary transition-colors">
-                <span className="material-symbols-outlined">arrow_back</span>
+                <ArrowLeft className="" />
               </button>
               <button className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white hover:bg-primary/20 hover:border-primary hover:text-primary transition-colors">
-                <span className="material-symbols-outlined">arrow_forward</span>
+                <ArrowRight className="" />
               </button>
             </div>
           </div>
@@ -339,12 +330,7 @@ export default function About() {
             <div className="bg-surface-container p-10 rounded-xl border border-white/5 hover:border-white/20 hover:-translate-y-1 transition-all duration-300 relative overflow-hidden group">
               <div className="absolute top-0 right-0 w-32 h-32 bg-primary/20 blur-[50px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
               <div className="text-primary mb-6 relative z-10">
-                <span
-                  className="material-symbols-outlined text-4xl"
-                  style={{ fontVariationSettings: "'FILL' 1" }}
-                >
-                  format_quote
-                </span>
+                <Quote className="text-4xl" />
               </div>
               <p className="text-slate-300 text-lg leading-relaxed mb-8 italic relative z-10">
                 "Herambh didn't just build us a platform; they built us a
@@ -362,12 +348,7 @@ export default function About() {
             <div className="bg-surface-container p-10 rounded-xl border border-white/5 hover:border-white/20 hover:-translate-y-1 transition-all duration-300 relative overflow-hidden group">
               <div className="absolute top-0 right-0 w-32 h-32 bg-primary/20 blur-[50px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
               <div className="text-primary mb-6 relative z-10">
-                <span
-                  className="material-symbols-outlined text-4xl"
-                  style={{ fontVariationSettings: "'FILL' 1" }}
-                >
-                  format_quote
-                </span>
+                <Quote className="text-4xl" />
               </div>
               <p className="text-slate-300 text-lg leading-relaxed mb-8 italic relative z-10">
                 "Their approach to architectural design is editorial-grade. They
@@ -386,12 +367,7 @@ export default function About() {
             <div className="bg-surface-container p-10 rounded-xl border border-white/5 hover:border-white/20 hover:-translate-y-1 transition-all duration-300 relative overflow-hidden group">
               <div className="absolute top-0 right-0 w-32 h-32 bg-primary/20 blur-[50px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
               <div className="text-primary mb-6 relative z-10">
-                <span
-                  className="material-symbols-outlined text-4xl"
-                  style={{ fontVariationSettings: "'FILL' 1" }}
-                >
-                  format_quote
-                </span>
+                <Quote className="text-4xl" />
               </div>
               <p className="text-slate-300 text-lg leading-relaxed mb-8 italic relative z-10">
                 "Working with Herambh was the best strategic decision we made

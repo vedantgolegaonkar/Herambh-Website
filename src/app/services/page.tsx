@@ -1,3 +1,4 @@
+import { ChevronsDown, CodeXml, Package, Bot, Globe, MonitorSmartphone, Images, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 export default function Services() {
@@ -22,9 +23,7 @@ export default function Services() {
           </p>
         </div>
         <div className="hidden md:flex w-32 h-32 rounded-full border border-primary/20 items-center justify-center animate-pulse">
-          <span className="material-symbols-outlined text-primary text-4xl">
-            keyboard_double_arrow_down
-          </span>
+          <ChevronsDown className="text-primary text-4xl" />
         </div>
       </header>
 
@@ -33,14 +32,10 @@ export default function Services() {
         {/* Software Development */}
         <div className="md:col-span-8 group relative overflow-hidden bg-surface-container-low p-8 rounded-xl hover:scale-[1.01] transition-all duration-300">
           <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
-            <span className="material-symbols-outlined text-9xl">
-              developer_mode
-            </span>
+            <CodeXml className="text-9xl" />
           </div>
           <div className="relative z-10">
-            <span className="material-symbols-outlined text-primary text-4xl mb-6">
-              developer_mode
-            </span>
+            <CodeXml className="text-primary text-4xl mb-6" />
             <h3 className="text-2xl font-headline font-semibold text-white mb-4">
               Custom Software Development
             </h3>
@@ -55,9 +50,7 @@ export default function Services() {
 
         {/* Product Development */}
         <div className="md:col-span-4 bg-surface-container-high p-8 rounded-xl hover:scale-[1.02] transition-all duration-300">
-          <span className="material-symbols-outlined text-primary text-4xl mb-6">
-            inventory_2
-          </span>
+          <Package className="text-primary text-4xl mb-6" />
           <h3 className="text-2xl font-headline font-semibold text-white mb-4">
             Product Strategy & Development
           </h3>
@@ -70,12 +63,7 @@ export default function Services() {
 
         {/* AI Automation & Agentic AI (Merged High-Tech Block) */}
         <div className="md:col-span-4 vitality-gradient p-8 rounded-xl shadow-2xl shadow-primary/20">
-          <span
-            className="material-symbols-outlined text-white text-4xl mb-6"
-            style={{ fontVariationSettings: "'FILL' 1" }}
-          >
-            smart_toy
-          </span>
+          <Bot className="text-white text-4xl mb-6" />
           <h3 className="text-2xl font-headline font-semibold text-white mb-4">
             AI Automation & Intelligent Systems
           </h3>
@@ -99,9 +87,7 @@ export default function Services() {
 
         {/* Website Building/Design */}
         <div className="md:col-span-4 bg-surface-container-low p-8 rounded-xl hover:scale-[1.02] transition-all duration-300 border-t border-white/5">
-          <span className="material-symbols-outlined text-primary text-4xl mb-6">
-            web
-          </span>
+          <Globe className="text-primary text-4xl mb-6" />
           <h3 className="text-2xl font-headline font-semibold text-white mb-4">
             Website Design & Development
           </h3>
@@ -114,9 +100,7 @@ export default function Services() {
 
         {/* Web/Mobile Applications */}
         <div className="md:col-span-4 bg-surface-container-high p-8 rounded-xl hover:scale-[1.02] transition-all duration-300">
-          <span className="material-symbols-outlined text-primary text-4xl mb-6">
-            devices
-          </span>
+          <MonitorSmartphone className="text-primary text-4xl mb-6" />
           <h3 className="text-2xl font-headline font-semibold text-white mb-4">
             Web & Mobile Application Development
           </h3>
@@ -138,9 +122,7 @@ export default function Services() {
           <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-8 w-full p-8 rounded-xl bg-surface-container/60 backdrop-blur-md border border-white/10">
             <div className="flex-1">
               <div className="flex items-center gap-4 mb-4">
-                <span className="material-symbols-outlined text-primary text-4xl">
-                  photo_library
-                </span>
+                <Images className="text-primary text-4xl" />
                 <h3 className="text-3xl font-headline font-bold text-white">
                   Portfolio & Business Websites
                 </h3>
@@ -156,9 +138,7 @@ export default function Services() {
                 className="group flex items-center gap-3 bg-white/5 hover:bg-white/10 border border-white/10 text-white px-8 py-4 rounded-full font-bold transition-all duration-300 hover:scale-105"
               >
                 Explore Portfolio
-                <span className="material-symbols-outlined text-primary transition-transform duration-300 group-hover:translate-x-1">
-                  trending_flat
-                </span>
+                <ArrowRight className="text-primary transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
             </div>
           </div>
