@@ -23,12 +23,15 @@ export default function Contact() {
             <div className="bg-surface-container-low p-8 rounded-2xl group hover:bg-surface-container transition-colors">
               <AtSign className="text-primary mb-4 text-3xl" />
               <h3 className="text-white font-semibold mb-2">Email Us</h3>
-              <p className="text-on-surface-variant text-sm">
-                hello@herambh.tech
-              </p>
-              <p className="text-on-surface-variant text-sm">
-                support@herambh.tech
-              </p>
+              <a href="mailto:herambh.info@gmail.com" target="_blank" rel="noopener noreferrer" className="text-on-surface-variant text-sm hover:text-primary transition-colors block">
+                herambh.info@gmail.com
+              </a>
+              <a href="mailto:herambh.support@gmail.com" target="_blank" rel="noopener noreferrer" className="text-on-surface-variant text-sm hover:text-primary transition-colors block">
+                herambh.support@gmail.com
+              </a>
+              <a href="mailto:herambh.tech.team@gmail.com" target="_blank" rel="noopener noreferrer" className="text-on-surface-variant text-sm hover:text-primary transition-colors block">
+                herambh.tech.team@gmail.com
+              </a>
             </div>
             <div className="bg-surface-container-low p-8 rounded-2xl group hover:bg-surface-container transition-colors">
               <MapPin className="text-primary mb-4 text-3xl" />
