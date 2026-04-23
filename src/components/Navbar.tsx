@@ -1,10 +1,17 @@
-import { NavLink } from 'react-router-dom';
+'use client';
+
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export default function Navbar() {
-  const getNavClass = ({ isActive }: { isActive: boolean }) =>
-    isActive
+  const pathname = usePathname();
+
+  const getNavClass = (path: string) => {
+    const isActive = pathname === path;
+    return isActive
       ? "text-green-500 border-b-2 border-green-500 pb-1 text-sm tracking-wide font-medium"
       : "text-slate-300 hover:text-white transition-colors text-sm tracking-wide font-medium";
+  };
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-surface backdrop-blur-xl shadow-2xl shadow-black/20">
@@ -17,21 +24,21 @@ export default function Navbar() {
           />
         </div>
         <div className="hidden md:flex items-center gap-8">
-          <NavLink to="/" end className={getNavClass}>
+          <Link href="/" className={getNavClass('/')}>
             Home
-          </NavLink>
-          <NavLink to="/services" className={getNavClass}>
+          </Link>
+          <Link href="/services" className={getNavClass('/services')}>
             Services
-          </NavLink>
-          <NavLink to="/portfolio" className={getNavClass}>
+          </Link>
+          <Link href="/portfolio" className={getNavClass('/portfolio')}>
             Portfolio
-          </NavLink>
-          <NavLink to="/about" className={getNavClass}>
+          </Link>
+          <Link href="/about" className={getNavClass('/about')}>
             About
-          </NavLink>
-          <NavLink to="/contact" className={getNavClass}>
+          </Link>
+          <Link href="/contact" className={getNavClass('/contact')}>
             Contact
-          </NavLink>
+          </Link>
         </div>
         <div className="flex items-center gap-6">
           <button className="bg-on-primary text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:scale-105 transition-transform duration-200">

@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 export default function Footer() {
   return (
@@ -32,22 +32,22 @@ export default function Footer() {
           <h5 className="text-white font-headline font-semibold mb-8">Solutions</h5>
           <ul className="space-y-4">
             <li>
-              <Link to="/services" className="text-slate-500 hover:text-green-500 transition-colors font-body">
+              <Link href="/services" className="text-slate-500 hover:text-green-500 transition-colors font-body">
                 AI Automation
               </Link>
             </li>
             <li>
-              <Link to="/services" className="text-slate-500 hover:text-green-500 transition-colors font-body">
+              <Link href="/services" className="text-slate-500 hover:text-green-500 transition-colors font-body">
                 Cloud Infrastructure
               </Link>
             </li>
             <li>
-              <Link to="/services" className="text-slate-500 hover:text-green-500 transition-colors font-body">
+              <Link href="/services" className="text-slate-500 hover:text-green-500 transition-colors font-body">
                 Custom Development
               </Link>
             </li>
             <li>
-              <Link to="/services" className="text-slate-500 hover:text-green-500 transition-colors font-body">
+              <Link href="/services" className="text-slate-500 hover:text-green-500 transition-colors font-body">
                 Digital Strategy
               </Link>
             </li>
@@ -57,22 +57,22 @@ export default function Footer() {
           <h5 className="text-white font-headline font-semibold mb-8">Company</h5>
           <ul className="space-y-4">
             <li>
-              <Link to="/about" className="text-slate-500 hover:text-green-500 transition-colors font-body">
+              <Link href="/about" className="text-slate-500 hover:text-green-500 transition-colors font-body">
                 About Us
               </Link>
             </li>
             <li>
-              <Link to="/contact" className="text-slate-500 hover:text-green-500 transition-colors font-body">
+              <Link href="/contact" className="text-slate-500 hover:text-green-500 transition-colors font-body">
                 Careers
               </Link>
             </li>
             <li>
-              <Link to="/portfolio" className="text-slate-500 hover:text-green-500 transition-colors font-body">
+              <Link href="/portfolio" className="text-slate-500 hover:text-green-500 transition-colors font-body">
                 Portfolio
               </Link>
             </li>
             <li>
-              <Link to="/contact" className="text-slate-500 hover:text-green-500 transition-colors font-body">
+              <Link href="/contact" className="text-slate-500 hover:text-green-500 transition-colors font-body">
                 Support
               </Link>
             </li>
@@ -121,3 +121,4 @@ export default function Footer() {
     </footer>
   );
 }
+
