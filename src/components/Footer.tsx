@@ -36,14 +36,14 @@ export default function Footer() {
             We don’t just build software — we build systems that businesses rely
             on.
           </p>
-          <div className="flex gap-4">
+          {/* <div className="flex gap-4">
             <div className="w-10 h-10 rounded-full bg-black/5 dark:bg-white/5 flex items-center justify-center hover:bg-primary/20 transition-colors cursor-pointer">
               <Globe className="text-sm text-slate-700 dark:text-slate-300" />
             </div>
             <div className="w-10 h-10 rounded-full bg-black/5 dark:bg-white/5 flex items-center justify-center hover:bg-primary/20 transition-colors cursor-pointer">
               <Share2 className="text-sm text-slate-700 dark:text-slate-300" />
             </div>
-          </div>
+          </div> */}
         </div>
         <div>
           <h5 className="text-slate-900 dark:text-white font-headline font-semibold mb-8">

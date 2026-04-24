@@ -294,7 +294,7 @@ export default function About() {
                 </svg>
               </a>
               <a
-                href="mailto:golegaonkarvedant92@gmail.com"
+                href="mailto:herambh.info@gmail.com"
                 target="_blank"
                 className="w-12 h-12 rounded-full bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 flex items-center justify-center hover:bg-primary hover:text-slate-900 dark:hover:text-white hover:border-primary transition-all text-slate-600 dark:text-slate-400"
               >
