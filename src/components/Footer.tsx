@@ -1,7 +1,21 @@
+'use client';
+
 import { Globe, Share2 } from "lucide-react";
-import Link from 'next/link';
+import Link from "next/link";
+import { usePathname } from 'next/navigation';
+
+const allCompanyLinks = [
+  { href: "/", label: "Home" },
+  { href: "/services", label: "Services" },
+  { href: "/portfolio", label: "Portfolio" },
+  { href: "/about", label: "About" },
+  { href: "/contact", label: "Contact" },
+];
 
 export default function Footer() {
+  const pathname = usePathname();
+  const activeCompanyLinks = allCompanyLinks.filter(link => link.href !== pathname).slice(0, 4);
+
   return (
     <footer className="bg-white dark:bg-slate-950 w-full pt-24 pb-12 border-t border-black/5 dark:border-white/5">
       <div className="max-w-[100rem] mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-16 mb-20">
@@ -9,12 +23,18 @@ export default function Footer() {
           <div className="flex items-center mb-8">
             <img
               alt="Herambh Software"
-              className="h-12 w-auto object-contain"
-              src="https://lh3.googleusercontent.com/aida/ADBb0ujV4MN4Jt5ffMvYIKIfR59aJypSv83jKWs8t3ovONGtzL1IjJUbHAcEGB8NAtPzW1m2vkwt8ad2XiZ6u-YO3G_dQcSHQWrnKlIC6qA5M_Kslr8sMyFcZ5NZtbYHV5pO_YkRxHuOeVq4XR5SQRtJ1FyKC_8fxbD5md8ZsLCOUgE3sMMEfcBA6GrE7vfCUSG-BJDnUXf7mxSnQ8RclZrB8e0rmYvUgb0RtVdwFH7EEskUt0igLYIA5G-alR2dM1bR69RpB85mGgUdRQo"
+              className="h-12 w-auto object-contain dark:block hidden"
+              src="/images/transparent_full_white_logo.png"
+            />
+            <img
+              alt="Herambh Software"
+              className="h-12 w-auto object-contain dark:hidden block"
+              src="/images/transparent_full_black_logo.png"
             />
           </div>
           <p className="text-slate-500 dark:text-slate-500 font-body leading-relaxed mb-8">
-            Defining the next era of enterprise software through precision engineering and vital innovation.
+            We don’t just build software — we build systems that businesses rely
+            on.
           </p>
           <div className="flex gap-4">
             <div className="w-10 h-10 rounded-full bg-black/5 dark:bg-white/5 flex items-center justify-center hover:bg-primary/20 transition-colors cursor-pointer">
@@ -26,96 +46,129 @@ export default function Footer() {
           </div>
         </div>
         <div>
-          <h5 className="text-slate-900 dark:text-white font-headline font-semibold mb-8">Solutions</h5>
+          <h5 className="text-slate-900 dark:text-white font-headline font-semibold mb-8">
+            Solutions
+          </h5>
           <ul className="space-y-4">
             <li>
-              <Link href="/services" className="text-slate-500 dark:text-slate-500 hover:text-green-500 transition-colors font-body">
+              <Link
+                href="/services"
+                className="text-slate-500 dark:text-slate-500 hover:text-green-500 transition-colors font-body"
+              >
                 AI Automation
               </Link>
             </li>
             <li>
-              <Link href="/services" className="text-slate-500 dark:text-slate-500 hover:text-green-500 transition-colors font-body">
-                Cloud Infrastructure
+              <Link
+                href="/services"
+                className="text-slate-500 dark:text-slate-500 hover:text-green-500 transition-colors font-body"
+              >
+                Custom Software Development
               </Link>
             </li>
             <li>
-              <Link href="/services" className="text-slate-500 dark:text-slate-500 hover:text-green-500 transition-colors font-body">
-                Custom Development
+              <Link
+                href="/services"
+                className="text-slate-500 dark:text-slate-500 hover:text-green-500 transition-colors font-body"
+              >
+                Web Design & Development
               </Link>
             </li>
             <li>
-              <Link href="/services" className="text-slate-500 dark:text-slate-500 hover:text-green-500 transition-colors font-body">
-                Digital Strategy
-              </Link>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <h5 className="text-slate-900 dark:text-white font-headline font-semibold mb-8">Company</h5>
-          <ul className="space-y-4">
-            <li>
-              <Link href="/about" className="text-slate-500 dark:text-slate-500 hover:text-green-500 transition-colors font-body">
-                About Us
-              </Link>
-            </li>
-            <li>
-              <Link href="/contact" className="text-slate-500 dark:text-slate-500 hover:text-green-500 transition-colors font-body">
-                Careers
-              </Link>
-            </li>
-            <li>
-              <Link href="/portfolio" className="text-slate-500 dark:text-slate-500 hover:text-green-500 transition-colors font-body">
-                Portfolio
-              </Link>
-            </li>
-            <li>
-              <Link href="/contact" className="text-slate-500 dark:text-slate-500 hover:text-green-500 transition-colors font-body">
-                Support
+              <Link
+                href="/services"
+                className="text-slate-500 dark:text-slate-500 hover:text-green-500 transition-colors font-body"
+              >
+                Mobile Application Development
               </Link>
             </li>
           </ul>
         </div>
         <div>
-          <h5 className="text-slate-900 dark:text-white font-headline font-semibold mb-8">Legal</h5>
+          <h5 className="text-slate-900 dark:text-white font-headline font-semibold mb-8">
+            Company
+          </h5>
+          <ul className="space-y-4">
+            {activeCompanyLinks.map((link) => (
+              <li key={link.href}>
+                <Link
+                  href={link.href}
+                  className="text-slate-500 dark:text-slate-500 hover:text-green-500 transition-colors font-body"
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <h5 className="text-slate-900 dark:text-white font-headline font-semibold mb-8">
+            Legal
+          </h5>
           <ul className="space-y-4">
             <li>
-              <a href="#" className="text-slate-500 dark:text-slate-500 hover:text-green-500 transition-colors font-body">
+              <Link
+                href="/privacy"
+                className="text-slate-500 dark:text-slate-500 hover:text-green-500 transition-colors font-body"
+                target="_blank"
+              >
                 Privacy Policy
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="text-slate-500 dark:text-slate-500 hover:text-green-500 transition-colors font-body">
+              <Link
+                href="/terms"
+                className="text-slate-500 dark:text-slate-500 hover:text-green-500 transition-colors font-body"
+                target="_blank"
+              >
                 Terms of Service
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="text-slate-500 dark:text-slate-500 hover:text-green-500 transition-colors font-body">
+              <Link
+                href="/compliance"
+                className="text-slate-500 dark:text-slate-500 hover:text-green-500 transition-colors font-body"
+                target="_blank"
+              >
                 Compliance
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
       </div>
       <div className="max-w-[90rem] mx-auto px-6 pt-8 border-t border-black/5 dark:border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
         <p className="text-slate-500 dark:text-slate-500 text-sm font-body">
-          © 2024 Herambh Software Technologies & Solutions. All rights reserved.
+          © 2026 Herambh Software Technologies & Solutions. All rights reserved.
         </p>
         <div className="flex gap-8">
-          <a href="#" className="text-slate-500 dark:text-slate-500 hover:text-green-500 text-sm font-body transition-colors">
+          <Link
+            href="/privacy"
+            className="text-slate-500 dark:text-slate-500 hover:text-green-500 text-sm font-body transition-colors"
+            target="_blank"
+          >
             Privacy Policy
-          </a>
-          <a href="#" className="text-slate-500 dark:text-slate-500 hover:text-green-500 text-sm font-body transition-colors">
+          </Link>
+          <Link
+            href="/terms"
+            className="text-slate-500 dark:text-slate-500 hover:text-green-500 text-sm font-body transition-colors"
+            target="_blank"
+          >
             Terms of Service
-          </a>
-          <a href="#" className="text-slate-500 dark:text-slate-500 hover:text-green-500 text-sm font-body transition-colors">
+          </Link>
+          {/* <a
+            href="#"
+            className="text-slate-500 dark:text-slate-500 hover:text-green-500 text-sm font-body transition-colors"
+          >
             Careers
           </a>
-          <a href="#" className="text-slate-500 dark:text-slate-500 hover:text-green-500 text-sm font-body transition-colors">
+          <a
+            href="#"
+            className="text-slate-500 dark:text-slate-500 hover:text-green-500 text-sm font-body transition-colors"
+          >
             Support
-          </a>
+          </a> */}
         </div>
       </div>
     </footer>
   );
 }
-
