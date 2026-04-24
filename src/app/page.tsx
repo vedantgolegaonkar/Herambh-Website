@@ -44,14 +44,14 @@ export default function Home() {
                 Start Your Project
               </Link>
               <Link href="/portfolio"
-                className="inline-block bg-surface-container-high text-on-surface px-10 py-4 rounded-2xl text-lg font-bold hover:bg-surface-container-highest transition-colors border border-white/5"
+                className="inline-block bg-surface-container-high text-on-surface px-10 py-4 rounded-2xl text-lg font-bold hover:bg-surface-container-highest transition-colors border border-black/5 dark:border-white/5"
               >
                 Explore Our Work
               </Link>
             </div>
           </div>
           <div className="lg:col-span-5 relative mt-8 lg:mt-0">
-            <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl shadow-black/40 border border-white/5 bg-surface-container-low p-2">
+            <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl shadow-black/40 border border-black/5 dark:border-white/5 bg-surface-container-low p-2">
               <img
                 alt="Software Development"
                 className="rounded-xl w-full h-[500px] object-cover"
@@ -76,7 +76,7 @@ export default function Home() {
             </h3>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-surface-container-high p-10 rounded-2xl group hover:scale-[1.02] transition-all duration-300 border border-white/5">
+            <div className="bg-surface-container-high p-10 rounded-2xl group hover:scale-[1.02] transition-all duration-300 border border-black/5 dark:border-white/5">
               <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-8 text-primary group-hover:scale-110 transition-transform">
                 <Microscope className="text-3xl" />
               </div>
@@ -90,7 +90,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="bg-surface-container-high p-10 rounded-2xl group hover:scale-[1.02] transition-all duration-300 border border-white/5">
+            <div className="bg-surface-container-high p-10 rounded-2xl group hover:scale-[1.02] transition-all duration-300 border border-black/5 dark:border-white/5">
               <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-8 text-primary group-hover:scale-110 transition-transform">
                 <Lightbulb className="text-3xl" />
               </div>
@@ -104,7 +104,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="bg-surface-container-high p-10 rounded-2xl group hover:scale-[1.02] transition-all duration-300 border border-white/5">
+            <div className="bg-surface-container-high p-10 rounded-2xl group hover:scale-[1.02] transition-all duration-300 border border-black/5 dark:border-white/5">
               <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-8 text-primary group-hover:scale-110 transition-transform">
                 <TrendingUp className="text-3xl" />
               </div>
@@ -140,77 +140,77 @@ export default function Home() {
             </Link>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="group relative aspect-square bg-surface-container rounded-2xl overflow-hidden">
+            <div className="group relative aspect-square bg-slate-950 rounded-2xl overflow-hidden shadow-lg border border-black/5 dark:border-white/5">
               <img
-                className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-110 group-hover:opacity-60 transition-all duration-500"
+                className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-110 group-hover:opacity-70 transition-all duration-700"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-7bR1y1559PmABvEN784ZBt141HDiaq38X28agBpXswKxsfjYcsee1XbW-Dr88E5JhzYsNc1vQN914KzRQrL0s9DfvVnAaJPTU5RmmXJUKDANRSi-68KHBjE63TVtUwHOSIXdd-b4VwBy2FV7gjR9PKwl1lBwNRbsPLfufwbN2KwWOLUgFJrMkCn93yVHT6UmFN5DxdudRimQk5jx9YDlZnIk9t1zus8fBbkpWwJXkC4m_PfnQnHnntDIrIj_w8rUaTEgsu43kMq6"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-surface-dim via-transparent to-transparent"></div>
-              <div className="absolute bottom-0 p-8">
-                <span className="text-primary-fixed-dim font-label text-xs uppercase tracking-widest mb-2 block">
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent"></div>
+              <div className="absolute bottom-0 p-8 z-10 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                <span className="text-primary font-label text-xs uppercase tracking-widest mb-3 block font-bold">
                   SMART AUTOMATION
                 </span>
-                <h4 className="text-xl font-bold font-headline">
+                <h4 className="text-2xl font-bold font-headline text-white mb-3">
                   AI-Powered Workflows
                 </h4>
-                <p className="text-on-surface-variant pt-9">
+                <p className="text-slate-300 text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
                   Automate repetitive tasks, optimize operations, and improve
                   decision-making with intelligent business automation.
                 </p>
               </div>
             </div>
-            <div className="group relative aspect-square bg-surface-container rounded-2xl overflow-hidden">
+            <div className="group relative aspect-square bg-slate-950 rounded-2xl overflow-hidden shadow-lg border border-black/5 dark:border-white/5">
               <img
-                className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-110 group-hover:opacity-60 transition-all duration-500"
+                className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-110 group-hover:opacity-70 transition-all duration-700"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuDITqKAaiIKkDxV6sXJf4PLPANQvqRbqPUBk1uZp21bNwMiRZp2yw59NFv5ulgOEcyKIJUhgllPkg74ybZYJ6I5FCM1BFzE1ANBvx482ueHx6gkVJEJo6VckKBdc9LcRqt9jsyLAji1mCy3lGq4DOF0YJDC2utpkbQGnW3OaiPdscf8hnJlxXRd0exHp0zWOnzRTX08xh9022I39lLl3WVHqxFuDcU0UEtTRmweLKRAPdsgXN81VzrErWvY54CJXfuwqEchSHrQqaSR"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-surface-dim via-transparent to-transparent"></div>
-              <div className="absolute bottom-0 p-8">
-                <span className="text-primary-fixed-dim font-label text-xs uppercase tracking-widest mb-2 block">
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent"></div>
+              <div className="absolute bottom-0 p-8 z-10 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                <span className="text-primary font-label text-xs uppercase tracking-widest mb-3 block font-bold">
                   CROSS-PLATFORM
                 </span>
-                <h4 className="text-xl font-bold font-headline">
+                <h4 className="text-2xl font-bold font-headline text-white mb-3">
                   Mobile Applications
                 </h4>
-                <p className="text-on-surface-variant pt-15">
+                <p className="text-slate-300 text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
                   Build seamless Android and iOS experiences with scalable,
                   high-performance mobile applications.
                 </p>
               </div>
             </div>
-            <div className="group relative aspect-square bg-surface-container rounded-2xl overflow-hidden">
+            <div className="group relative aspect-square bg-slate-950 rounded-2xl overflow-hidden shadow-lg border border-black/5 dark:border-white/5">
               <img
-                className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-110 group-hover:opacity-60 transition-all duration-500"
+                className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-110 group-hover:opacity-70 transition-all duration-700"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIsZxLQD69-FvmvAZj3kTB47n-RvpLkYXgSCzZraBmhVOhc8yuHzi6URVSK9xE7tXrv_ZkpruzyM7APXrmXFtdN5PVEg1AsjEE3MTvoBVprxmG9nuU83YGv2Cxi5DxTXtbrwIOJguobVHc79mq-tchXBfHpUSRKxCikooilq1rTlnBoYmGJHZj7g64GZL0oSpXWoDG1SoU1xR50KxdbavdamrABHMSJGdEb1L2LHMNVegpLq8BxOKtz_sq59lohdn0UutbC8IVKZl9"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-surface-dim via-transparent to-transparent"></div>
-              <div className="absolute bottom-0 p-8">
-                <span className="text-primary-fixed-dim font-label text-xs uppercase tracking-widest mb-2 block">
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent"></div>
+              <div className="absolute bottom-0 p-8 z-10 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                <span className="text-primary font-label text-xs uppercase tracking-widest mb-3 block font-bold">
                   WEB DEVELOPMENT
                 </span>
-                <h4 className="text-xl font-bold font-headline">
+                <h4 className="text-2xl font-bold font-headline text-white mb-3">
                   Custom Web Platforms
                 </h4>
-                <p className="text-on-surface-variant pt-15">
+                <p className="text-slate-300 text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
                   From business websites to enterprise dashboards, we develop
                   secure and scalable web ecosystems.
                 </p>
               </div>
             </div>
-            <div className="group relative aspect-square bg-surface-container rounded-2xl overflow-hidden">
+            <div className="group relative aspect-square bg-slate-950 rounded-2xl overflow-hidden shadow-lg border border-black/5 dark:border-white/5">
               <img
-                className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-110 group-hover:opacity-60 transition-all duration-500"
+                className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-110 group-hover:opacity-70 transition-all duration-700"
                 src="/images/ai_agent.png"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-surface-dim via-transparent to-transparent"></div>
-              <div className="absolute bottom-0 p-8">
-                <span className="text-primary-fixed-dim font-label text-xs uppercase tracking-widest mb-2 block">
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent"></div>
+              <div className="absolute bottom-0 p-8 z-10 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                <span className="text-primary font-label text-xs uppercase tracking-widest mb-3 block font-bold">
                   INTELLIGENT SYSTEMS
                 </span>
-                <h4 className="text-xl font-bold font-headline">
+                <h4 className="text-2xl font-bold font-headline text-white mb-3">
                   AI Agents & Integrations
                 </h4>
-                <p className="text-on-surface-variant pt-10">
+                <p className="text-slate-300 text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
                   Deploy AI-driven assistants, chat systems, and smart
                   integrations that improve customer experience and internal
                   workflows.
@@ -226,9 +226,9 @@ export default function Home() {
         <div className="max-w-[100rem] mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div className="relative">
-              <div className="asymmetric-shape bg-surface-container-high h-[400px] w-full rounded-2xl overflow-hidden relative border border-white/5">
+              <div className="asymmetric-shape bg-slate-950 h-[400px] w-full rounded-2xl overflow-hidden relative shadow-lg border border-black/5 dark:border-white/5 group cursor-pointer">
                 <img
-                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 opacity-60"
+                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 opacity-60 group-hover:opacity-100"
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuBur0pyhb4pPfIj9uKScoM6SkoOrn65O79qOKRIC1OMbPJ2abSjT4Pr638ZpKHN6kot2SHYLFDedd6QHlLJCh4MAnK_NEB3MElvo4ZN-5SVrnEzMkeR8nRRGL-Z3U9uOvudrkzRIzlOnti0jd1L3dKl5lYfZvUtqnlTAikPmcVeX2msJWakyeOkJwalWy_KwSSdyWHJXOlUsHGee173L3bVsl3JNVTrbFTZwZZqCypd5Oht1HTYyMy6a44SWomodX7XorUKqN4tS2tW"
                 />
               </div>
@@ -265,7 +265,7 @@ export default function Home() {
                 user-focused design.
               </p>
               <Link href="/about"
-                className="inline-flex items-center gap-3 bg-white/5 hover:bg-white/10 px-6 py-4 rounded-xl font-bold transition-colors border border-white/10 group"
+                className="inline-flex items-center gap-3 bg-black/5 dark:bg-white/5 hover:bg-black/10 dark:hover:bg-white/10 px-6 py-4 rounded-xl font-bold transition-colors border border-black/10 dark:border-white/10 group"
               >
                 Discover Our Story
                 <ArrowRight className="group-hover:translate-x-1 transition-transform" />

@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect } from 'react';
+import { ThemeToggle } from './ThemeToggle';
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -16,7 +17,7 @@ export default function Navbar() {
     const isActive = pathname === path;
     return isActive
       ? "text-green-500 border-b-2 border-green-500 pb-1 text-sm tracking-wide font-medium"
-      : "text-slate-300 hover:text-white transition-colors text-sm tracking-wide font-medium";
+      : "text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors text-sm tracking-wide font-medium";
   };
 
   return (
@@ -25,8 +26,13 @@ export default function Navbar() {
         <div className="flex items-center">
           <img
             alt="Herambh Software"
-            className="h-12 w-auto object-contain"
+            className="h-12 w-auto object-contain dark:block hidden"
             src="/images/transparent_full_white_logo.png"
+          />
+          <img
+            alt="Herambh Software"
+            className="h-12 w-auto object-contain dark:hidden block"
+            src="/images/transparent_full_black_logo.png"
           />
         </div>
         <div className="hidden md:flex items-center gap-8">
@@ -46,8 +52,9 @@ export default function Navbar() {
             Contact
           </Link>
         </div>
-        <div className="flex items-center gap-6">
-          <button className="bg-on-primary text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:scale-105 transition-transform duration-200">
+        <div className="flex items-center gap-4">
+          <ThemeToggle />
+          <button className="bg-on-primary text-slate-900 dark:text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:scale-105 transition-transform duration-200">
             Get a Quote
           </button>
         </div>

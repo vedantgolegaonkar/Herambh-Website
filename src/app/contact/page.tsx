@@ -1,5 +1,40 @@
+'use client';
+
+import React, { useState } from 'react';
 import { AtSign, MapPin, ChevronDown } from "lucide-react";
+
 export default function Contact() {
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setStatus('loading');
+    
+    const formData = new FormData(e.currentTarget);
+    formData.append("access_key", "429dc99a-584e-4f09-a101-78431910715b");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setStatus('success');
+        (e.target as HTMLFormElement).reset();
+        setTimeout(() => setStatus('idle'), 5000); // Reset UI after 5 seconds
+      } else {
+        console.error("Error", data);
+        setStatus('error');
+      }
+    } catch (error) {
+      console.error(error);
+      setStatus('error');
+    }
+  };
+
   return (
     <main className="pt-32 pb-24 px-6 max-w-[100rem] mx-auto">
       {/* Hero Section */}
@@ -8,7 +43,7 @@ export default function Contact() {
           <span className="inline-block px-4 py-1 rounded-full bg-primary/10 text-primary text-xs font-label tracking-widest uppercase mb-6">
             START THE CONVERSATION
           </span>
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-8 leading-[1.1]">
+          <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-slate-900 dark:text-white mb-8 leading-[1.1]">
             Let's build your next <span className="text-primary">competitive advantage.</span>{" "}
           </h1>
           <p className="text-lg text-on-surface-variant leading-relaxed max-w-xl mb-12">
@@ -22,7 +57,7 @@ export default function Contact() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="bg-surface-container-low p-8 rounded-2xl group hover:bg-surface-container transition-colors">
               <AtSign className="text-primary mb-4 text-3xl" />
-              <h3 className="text-white font-semibold mb-2">Email Us</h3>
+              <h3 className="text-slate-900 dark:text-white font-semibold mb-2">Email Us</h3>
               <a href="mailto:herambh.info@gmail.com" target="_blank" rel="noopener noreferrer" className="text-on-surface-variant text-sm hover:text-primary transition-colors block">
                 herambh.info@gmail.com
               </a>
@@ -35,7 +70,7 @@ export default function Contact() {
             </div>
             <div className="bg-surface-container-low p-8 rounded-2xl group hover:bg-surface-container transition-colors">
               <MapPin className="text-primary mb-4 text-3xl" />
-              <h3 className="text-white font-semibold mb-2">Office</h3>
+              <h3 className="text-slate-900 dark:text-white font-semibold mb-2">Office</h3>
               {/* <p className="text-on-surface-variant text-sm">
                 Shivaji Nagar
               </p> */}
@@ -48,34 +83,38 @@ export default function Contact() {
 
         {/* Modern Contact Form */}
         <div className="lg:col-span-5">
-          <div className="bg-surface-container-high p-8 md:p-10 rounded-2xl shadow-2xl border border-white/5 relative overflow-hidden">
+          <div className="bg-surface-container-high p-8 md:p-10 rounded-2xl shadow-2xl border border-black/5 dark:border-white/5 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 blur-3xl -mr-16 -mt-16 rounded-full"></div>
-            <form className="relative z-10 space-y-6">
+            <form onSubmit={handleSubmit} className="relative z-10 space-y-6">
               <div className="space-y-2">
-                <label className="text-xs font-label uppercase tracking-widest text-slate-400">
+                <label className="text-xs font-label uppercase tracking-widest text-slate-600 dark:text-slate-400">
                   Full Name
                 </label>
                 <input
-                  className="w-full bg-surface-container-low border-none rounded-xl mt-2 px-4 py-4 text-white placeholder:text-slate-600 focus:ring-2 focus:ring-primary/30 transition-all outline-none"
+                  name="name"
+                  className="w-full bg-surface-container-low border-none rounded-xl mt-2 px-4 py-4 text-slate-900 dark:text-white placeholder:text-slate-600 focus:ring-2 focus:ring-primary/30 transition-all outline-none"
                   placeholder="John Doe"
                   type="text"
+                  required
                 />
               </div>
               <div className="space-y-2">
-                <label className="text-xs font-label uppercase tracking-widest text-slate-400">
+                <label className="text-xs font-label uppercase tracking-widest text-slate-600 dark:text-slate-400">
                   Work Email
                 </label>
                 <input
-                  className="w-full bg-surface-container-low border-none rounded-xl mt-2 px-4 py-4 text-white placeholder:text-slate-600 focus:ring-2 focus:ring-primary/30 transition-all outline-none"
+                  name="email"
+                  className="w-full bg-surface-container-low border-none rounded-xl mt-2 px-4 py-4 text-slate-900 dark:text-white placeholder:text-slate-600 focus:ring-2 focus:ring-primary/30 transition-all outline-none"
                   placeholder="john@company.com"
                   type="email"
+                  required
                 />
               </div>
               <div className="space-y-2">
-                <label className="text-xs font-label uppercase tracking-widest text-slate-400">
+                <label className="text-xs font-label uppercase tracking-widest text-slate-600 dark:text-slate-400">
                   Project Type
                 </label>
-                <select className="w-full bg-surface-container-low border-none rounded-xl mt-2 px-4 py-4 text-white focus:ring-2 focus:ring-primary/30 transition-all outline-none appearance-none">
+                <select name="projectType" className="w-full bg-surface-container-low border-none rounded-xl mt-2 px-4 py-4 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary/30 transition-all outline-none appearance-none">
                   <option>SaaS Development</option>
                   <option>Cloud Architecture</option>
                   <option>Mobile Engineering</option>
@@ -83,21 +122,27 @@ export default function Contact() {
                 </select>
               </div>
               <div className="space-y-2">
-                <label className="text-xs font-label uppercase tracking-widest text-slate-400">
+                <label className="text-xs font-label uppercase tracking-widest text-slate-600 dark:text-slate-400">
                   Project Goals
                 </label>
                 <textarea
-                  className="w-full bg-surface-container-low border-none rounded-xl mt-2 px-4 py-4 text-white placeholder:text-slate-600 focus:ring-2 focus:ring-primary/30 transition-all outline-none resize-none"
+                  name="goals"
+                  className="w-full bg-surface-container-low border-none rounded-xl mt-2 px-4 py-4 text-slate-900 dark:text-white placeholder:text-slate-600 focus:ring-2 focus:ring-primary/30 transition-all outline-none resize-none"
                   placeholder="Tell us about your business, project requirements, goals, and expected timeline..."
                   rows={4}
+                  required
                 ></textarea>
               </div>
               <button
-                className="w-full bg-gradient-to-r from-primary to-secondary-container text-on-primary-container font-bold py-4 rounded-xl hover:scale-[1.02] active:scale-95 transition-all shadow-lg shadow-primary/20"
+                disabled={status === 'loading' || status === 'success'}
+                className="w-full bg-gradient-to-r from-primary to-secondary-container text-on-primary-container font-bold py-4 rounded-xl hover:scale-[1.02] active:scale-95 transition-all shadow-lg shadow-primary/20 disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:scale-100 disabled:active:scale-100"
                 type="submit"
               >
-                Send Request
+                {status === 'loading' ? 'Sending Request...' : status === 'success' ? 'Request Sent Successfully!' : 'Send Request'}
               </button>
+              {status === 'error' && (
+                <p className="text-red-400 text-sm text-center mt-2">There was an issue sending your request. Please try again.</p>
+              )}
             </form>
           </div>
         </div>
@@ -106,7 +151,7 @@ export default function Contact() {
       {/* What Happens Next Section */}
       <section className="mt-32">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
             Our process
           </h2>
           <p className="text-on-surface-variant max-w-2xl mx-auto">
@@ -115,48 +160,48 @@ export default function Contact() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="relative group">
-            <div className="text-6xl font-extrabold text-white/5 absolute -top-8 -left-2 group-hover:text-primary/10 transition-colors">
+            <div className="text-6xl font-extrabold text-slate-900 dark:text-white/5 absolute -top-8 -left-2 group-hover:text-primary/10 transition-colors">
               01
             </div>
             <div className="relative pt-4">
-              <h4 className="text-white font-bold mb-3">Initial Review</h4>
-              <p className="text-sm text-slate-400 leading-relaxed">
+              <h4 className="text-slate-900 dark:text-white font-bold mb-3">Initial Review</h4>
+              <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
                 We review your requirements, business objectives, 
                 and technical needs to understand the right direction.
               </p>
             </div>
           </div>
           <div className="relative group">
-            <div className="text-6xl font-extrabold text-white/5 absolute -top-8 -left-2 group-hover:text-primary/10 transition-colors">
+            <div className="text-6xl font-extrabold text-slate-900 dark:text-white/5 absolute -top-8 -left-2 group-hover:text-primary/10 transition-colors">
               02
             </div>
             <div className="relative pt-4">
-              <h4 className="text-white font-bold mb-3">Strategy Call</h4>
-              <p className="text-sm text-slate-400 leading-relaxed">
+              <h4 className="text-slate-900 dark:text-white font-bold mb-3">Strategy Call</h4>
+              <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
                 Our team schedules a focused discussion to align 
                 on goals, priorities, scope, and technology.
               </p>
             </div>
           </div>
           <div className="relative group">
-            <div className="text-6xl font-extrabold text-white/5 absolute -top-8 -left-2 group-hover:text-primary/10 transition-colors">
+            <div className="text-6xl font-extrabold text-slate-900 dark:text-white/5 absolute -top-8 -left-2 group-hover:text-primary/10 transition-colors">
               03
             </div>
             <div className="relative pt-4">
-              <h4 className="text-white font-bold mb-3">Proposal & Roadmap</h4>
-              <p className="text-sm text-slate-400 leading-relaxed">
+              <h4 className="text-slate-900 dark:text-white font-bold mb-3">Proposal & Roadmap</h4>
+              <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
                 You receive a clear project roadmap, estimated 
                 timelines, technical recommendations, and commercial proposal.
               </p>
             </div>
           </div>
           <div className="relative group">
-            <div className="text-6xl font-extrabold text-white/5 absolute -top-8 -left-2 group-hover:text-primary/10 transition-colors">
+            <div className="text-6xl font-extrabold text-slate-900 dark:text-white/5 absolute -top-8 -left-2 group-hover:text-primary/10 transition-colors">
               04
             </div>
             <div className="relative pt-4">
-              <h4 className="text-white font-bold mb-3">Execution Begins</h4>
-              <p className="text-sm text-slate-400 leading-relaxed">
+              <h4 className="text-slate-900 dark:text-white font-bold mb-3">Execution Begins</h4>
+              <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
                 Once approved, we begin planning, design, and development 
                 with a structured execution process.
               </p>
@@ -169,16 +214,16 @@ export default function Contact() {
       <section className="mt-40 max-w-5xl mx-auto">
         <div className="flex items-center gap-4 mb-12">
           <div className="h-px flex-1 bg-gradient-to-r from-transparent to-primary/20"></div>
-          <h2 className="text-3xl font-bold text-white">Common Inquiries</h2>
+          <h2 className="text-3xl font-bold text-slate-900 dark:text-white">Common Inquiries</h2>
           <div className="h-px flex-1 bg-gradient-to-l from-transparent to-primary/20"></div>
         </div>
         <div className="space-y-4">
           <details className="group bg-surface-container-low rounded-2xl overflow-hidden [&_summary::-webkit-details-marker]:hidden">
             <summary className="flex justify-between items-center p-6 cursor-pointer select-none">
-              <h3 className="text-white font-medium">
+              <h3 className="text-slate-900 dark:text-white font-medium">
                 How soon can we start a project?
               </h3>
-              <ChevronDown className="text-slate-500 group-open:rotate-180 transition-transform" />
+              <ChevronDown className="text-slate-500 dark:text-slate-500 group-open:rotate-180 transition-transform" />
             </summary>
             <div className="px-6 pb-6 text-on-surface-variant text-sm leading-relaxed">
               Most projects can begin within a few business days after 
@@ -188,10 +233,10 @@ export default function Contact() {
           </details>
           <details className="group bg-surface-container-low rounded-2xl overflow-hidden [&_summary::-webkit-details-marker]:hidden">
             <summary className="flex justify-between items-center p-6 cursor-pointer select-none">
-              <h3 className="text-white font-medium">
+              <h3 className="text-slate-900 dark:text-white font-medium">
                 Do you provide support after project delivery?
               </h3>
-              <ChevronDown className="text-slate-500 group-open:rotate-180 transition-transform" />
+              <ChevronDown className="text-slate-500 dark:text-slate-500 group-open:rotate-180 transition-transform" />
             </summary>
             <div className="px-6 pb-6 text-on-surface-variant text-sm leading-relaxed">
               Yes. We provide tiered support and maintenance packages ensuring
@@ -201,10 +246,10 @@ export default function Contact() {
           </details>
           <details className="group bg-surface-container-low rounded-2xl overflow-hidden [&_summary::-webkit-details-marker]:hidden">
             <summary className="flex justify-between items-center p-6 cursor-pointer select-none">
-              <h3 className="text-white font-medium">
+              <h3 className="text-slate-900 dark:text-white font-medium">
                 Can you work with our internal team?
               </h3>
-              <ChevronDown className="text-slate-500 group-open:rotate-180 transition-transform" />
+              <ChevronDown className="text-slate-500 dark:text-slate-500 group-open:rotate-180 transition-transform" />
             </summary>
             <div className="px-6 pb-6 text-on-surface-variant text-sm leading-relaxed">
               Absolutely. We can collaborate with your in-house designers, 
@@ -216,18 +261,18 @@ export default function Contact() {
       </section>
 
       {/* Map Placeholder */}
-      <div className="mt-40 h-[400px] w-full rounded-2xl overflow-hidden grayscale contrast-125 brightness-50 border border-white/5 relative group">
+      {/* <div className="mt-40 h-[400px] w-full rounded-2xl overflow-hidden grayscale contrast-125 brightness-50 border border-black/5 dark:border-white/5 relative group">
         <img
           alt="Location Map"
           className="w-full h-full object-cover"
           src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5lpngnsU0ydNkpGGtZaBMRJ55schneb58hwzHRHGXgzTw-P9S2J4lthjCz5cssxgsgUk84BebHVjE-N9cmLBbJKWJrKRyKIGtaHzW2YfqmFa0PQE-s8KXLc3CoWdZ0SOAXFOhi9iQVyvU3jQ6okQ5y0QlpNmKzha3e3qyKl440MqrDbS541U9V3PCPMqtwuWJ0fBn31bp7Uc3IWeHM57iQlMHmCB9bHWa_gvnzMyqF6IgVY-72fANnTmpb0cE1tIl5Otl8DF2q_bA"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-surface to-transparent opacity-60"></div>
-        <div className="absolute bottom-8 left-8 bg-surface-container-highest/80 backdrop-blur-md p-6 rounded-xl border border-white/10">
+        <div className="absolute bottom-8 left-8 bg-surface-container-highest/80 backdrop-blur-md p-6 rounded-xl border border-black/10 dark:border-white/10">
           <p className="text-xs font-label uppercase text-primary mb-1">
             Global HQ
           </p>
-          <p className="text-white font-bold">
+          <p className="text-slate-900 dark:text-white font-bold">
             101 Innovation Dr, San Jose, CA
           </p>
           <a
@@ -237,7 +282,7 @@ export default function Contact() {
             Open in Maps
           </a>
         </div>
-      </div>
+      </div> */}
     </main>
   );
 }

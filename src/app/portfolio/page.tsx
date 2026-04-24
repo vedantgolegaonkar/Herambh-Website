@@ -11,7 +11,7 @@ export default function Portfolio() {
             <span className="text-primary font-label text-xs tracking-widest uppercase mb-4 block">
               Our Work
             </span>
-            <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter leading-tight text-white mb-6">
+            <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter leading-tight text-slate-900 dark:text-white mb-6">
               Building products that create{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
                 Lasting Impact
@@ -19,7 +19,7 @@ export default function Portfolio() {
             </h1>
           </div>
           <div className="pb-2">
-            <p className="text-slate-400 text-lg leading-relaxed max-w-md">
+            <p className="text-slate-600 dark:text-slate-400 text-lg leading-relaxed max-w-md">
               Explore a curated portfolio of digital products, enterprise
               platforms, AI-powered systems, and premium business websites
               designed to help brands grow, scale, and lead in their industries.
@@ -46,15 +46,15 @@ export default function Portfolio() {
                 <span className="bg-primary/10 text-primary text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest mb-3 inline-block">
                   AI App
                 </span>
-                <h3 className="text-3xl font-bold text-white mb-2">
+                <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-2">
                   NeuralStream Pro
                 </h3>
-                <p className="text-slate-400 max-w-xs">
+                <p className="text-slate-600 dark:text-slate-400 max-w-xs">
                   Real-time predictive analytics platform for global supply
                   chains.
                 </p>
               </div>
-              <button className="flex items-center gap-2 text-white bg-white/10 backdrop-blur-md px-6 py-3 rounded-xl hover:bg-primary hover:text-on-primary transition-all group/btn">
+              <button className="flex items-center gap-2 text-slate-900 dark:text-white bg-black/10 dark:bg-white/10 backdrop-blur-md px-6 py-3 rounded-xl hover:bg-primary hover:text-on-primary transition-all group/btn">
                 <span className="font-semibold">View Demo</span>
                 <ArrowRight className="text-sm group-hover/btn:translate-x-1 transition-transform" />
               </button>
@@ -75,8 +75,8 @@ export default function Portfolio() {
               <span className="bg-primary/10 text-primary text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest mb-3 inline-block">
                 Fintech
               </span>
-              <h3 className="text-2xl font-bold text-white mb-2">Vault86</h3>
-              <p className="text-slate-400 text-sm">
+              <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">Vault86</h3>
+              <p className="text-slate-600 dark:text-slate-400 text-sm">
                 Next-gen asset management with biometrically secured cold
                 storage.
               </p>
@@ -97,7 +97,7 @@ export default function Portfolio() {
               <span className="bg-primary/10 text-primary text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest mb-2 inline-block">
                 Web Platform
               </span>
-              <h3 className="text-xl font-bold text-white">Ethereal OS</h3>
+              <h3 className="text-xl font-bold text-slate-900 dark:text-white">Ethereal OS</h3>
             </div>
           </div>
 
@@ -116,9 +116,9 @@ export default function Portfolio() {
                 <span className="bg-primary/10 text-primary text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest mb-2 inline-block">
                   Infrastructure
                 </span>
-                <h3 className="text-2xl font-bold text-white">Titan Cloud</h3>
+                <h3 className="text-2xl font-bold text-slate-900 dark:text-white">Titan Cloud</h3>
               </div>
-              <button className="bg-white/5 border border-white/10 text-white p-3 rounded-full hover:bg-primary transition-colors">
+              <button className="bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 text-slate-900 dark:text-white p-3 rounded-full hover:bg-primary transition-colors">
                 <ExternalLink className="" />
               </button>
             </div>
@@ -128,13 +128,13 @@ export default function Portfolio() {
 
       {/* CTA Section */}
       <section className="mt-32 max-w-6xl mx-auto px-6">
-        <div className="relative overflow-hidden rounded-[2.5rem] bg-slate-900 border border-white/5 p-12 md:p-20 text-center">
+        <div className="relative overflow-hidden rounded-[2.5rem] bg-slate-900 border border-black/5 dark:border-white/5 p-12 md:p-20 text-center">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-64 h-64 bg-primary/20 blur-[100px] rounded-full"></div>
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-8 relative z-10 tracking-tight">
+          <h2 className="text-4xl md:text-6xl font-bold text-slate-900 dark:text-white mb-8 relative z-10 tracking-tight">
             Ready to build the <span className="text-primary italic">next</span>{" "}
             digital success story?
           </h2>
-          <p className="text-slate-400 max-w-3xl mx-auto mb-12 text-lg relative z-10">
+          <p className="text-slate-600 dark:text-slate-400 max-w-3xl mx-auto mb-12 text-lg relative z-10">
             Whether you're launching a startup, scaling an existing business, or
             transforming operations through technology, Herambh can help you
             bring your vision to life.
@@ -146,7 +146,7 @@ export default function Portfolio() {
               Discuss your project
               <MessageSquare className="" />
             </Link>
-            {/* <Link href="/" className="bg-white/5 backdrop-blur-md text-white font-bold px-10 py-5 rounded-2xl border border-white/10 hover:bg-white/10 transition-all">
+            {/* <Link href="/" className="bg-black/5 dark:bg-white/5 backdrop-blur-md text-slate-900 dark:text-white font-bold px-10 py-5 rounded-2xl border border-black/10 dark:border-white/10 hover:bg-black/10 dark:hover:bg-white/10 transition-all">
               View Portfolio
             </Link> */}
           </div>

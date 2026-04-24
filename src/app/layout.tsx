@@ -2,6 +2,7 @@ import { Analytics } from "@vercel/analytics/next"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import { ThemeProvider } from '../components/ThemeProvider';
 import './globals.css';
 
 export const metadata = {
@@ -15,13 +16,15 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className="bg-surface text-on-surface font-body selection:bg-primary selection:text-on-primary">
-        <Navbar />
-        <div className="pt-20">
-          {children}
-        </div>
-        <Footer />
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
+          <Navbar />
+          <div className="pt-20">
+            {children}
+          </div>
+          <Footer />
+        </ThemeProvider>
         <Analytics />
         <SpeedInsights />
       </body>
