@@ -160,7 +160,7 @@ export default function Contact() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="relative group">
-            <div className="text-6xl font-extrabold text-slate-900 dark:text-white/5 absolute -top-8 -left-2 group-hover:text-primary/10 transition-colors">
+            <div className="text-6xl font-extrabold text-slate-700 dark:text-white/5 absolute -top-10 -left-2 group-hover:text-primary/10 transition-colors">
               01
             </div>
             <div className="relative pt-4">
@@ -172,7 +172,7 @@ export default function Contact() {
             </div>
           </div>
           <div className="relative group">
-            <div className="text-6xl font-extrabold text-slate-900 dark:text-white/5 absolute -top-8 -left-2 group-hover:text-primary/10 transition-colors">
+            <div className="text-6xl font-extrabold text-slate-700 dark:text-white/5 absolute -top-10 -left-2 group-hover:text-primary/10 transition-colors">
               02
             </div>
             <div className="relative pt-4">
@@ -184,7 +184,7 @@ export default function Contact() {
             </div>
           </div>
           <div className="relative group">
-            <div className="text-6xl font-extrabold text-slate-900 dark:text-white/5 absolute -top-8 -left-2 group-hover:text-primary/10 transition-colors">
+            <div className="text-6xl font-extrabold text-slate-700 dark:text-white/5 absolute -top-10 -left-2 group-hover:text-primary/10 transition-colors">
               03
             </div>
             <div className="relative pt-4">
@@ -196,7 +196,7 @@ export default function Contact() {
             </div>
           </div>
           <div className="relative group">
-            <div className="text-6xl font-extrabold text-slate-900 dark:text-white/5 absolute -top-8 -left-2 group-hover:text-primary/10 transition-colors">
+            <div className="text-6xl font-extrabold text-slate-700 dark:text-white/5 absolute -top-10 -left-2 group-hover:text-primary/10 transition-colors">
               04
             </div>
             <div className="relative pt-4">

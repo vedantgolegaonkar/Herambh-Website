@@ -156,7 +156,7 @@ export default function Services() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
           {/* Step 1 */}
           <div className="bg-surface-container p-8 rounded-xl relative">
-            <div className="text-7xl font-headline font-extrabold text-slate-900 dark:text-white/5 absolute -top-4 -left-2 select-none">
+            <div className="text-7xl font-headline font-extrabold text-slate-700 dark:text-white/5 absolute -top-7 -left-2 select-none">
               01
             </div>
             <div className="relative z-10">
@@ -171,7 +171,7 @@ export default function Services() {
           </div>
           {/* Step 2 */}
           <div className="bg-surface-container-low p-8 rounded-xl relative mt-8 md:mt-12">
-            <div className="text-7xl font-headline font-extrabold text-slate-900 dark:text-white/5 absolute -top-4 -left-2 select-none">
+            <div className="text-7xl font-headline font-extrabold text-slate-700 dark:text-white/5 absolute -top-7 -left-2 select-none">
               02
             </div>
             <div className="relative z-10">
@@ -187,7 +187,7 @@ export default function Services() {
           </div>
           {/* Step 3 */}
           <div className="bg-surface-container p-8 rounded-xl relative">
-            <div className="text-7xl font-headline font-extrabold text-slate-900 dark:text-white/5 absolute -top-4 -left-2 select-none">
+            <div className="text-7xl font-headline font-extrabold text-slate-700 dark:text-white/5 absolute -top-7 -left-2 select-none">
               03
             </div>
             <div className="relative z-10">
@@ -202,7 +202,7 @@ export default function Services() {
           </div>
           {/* Step 4 */}
           <div className="bg-surface-container-low p-8 rounded-xl relative mt-8 md:mt-12">
-            <div className="text-7xl font-headline font-extrabold text-slate-900 dark:text-white/5 absolute -top-4 -left-2 select-none">
+            <div className="text-7xl font-headline font-extrabold text-slate-700 dark:text-white/5 absolute -top-7 -left-2 select-none">
               04
             </div>
             <div className="relative z-10">
