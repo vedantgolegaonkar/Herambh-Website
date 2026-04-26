@@ -17,8 +17,8 @@ export default function Footer() {
   const activeCompanyLinks = allCompanyLinks.filter(link => link.href !== pathname).slice(0, 4);
 
   return (
-    <footer className="bg-white dark:bg-slate-950 w-full pt-24 pb-12 border-t border-black/5 dark:border-white/5">
-      <div className="max-w-[100rem] mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-16 mb-20">
+    <footer className="bg-white dark:bg-slate-950 w-full pt-16 md:pt-24 pb-8 md:pb-12 border-t border-black/5 dark:border-white/5">
+      <div className="max-w-[100rem] mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-16 mb-16 md:mb-20">
         <div className="col-span-1 md:col-span-1">
           <div className="flex items-center mb-8">
             <img

@@ -1,7 +1,7 @@
 import { Eye, Rocket, PenTool, Globe, ShieldCheck, Mail, ArrowLeft, ArrowRight, Quote } from "lucide-react";
 export default function About() {
   return (
-    <main className="pt-24">
+    <main className="pt-28 md:pt-36">
       {/* Hero Section */}
       <section className="px-6 py-20 max-w-[100rem] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
@@ -9,7 +9,7 @@ export default function About() {
             <div className="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold tracking-widest uppercase">
               WHO WE ARE
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold font-headline leading-[1.1] tracking-tight text-slate-900 dark:text-white">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-headline leading-[1.1] tracking-tight text-slate-900 dark:text-white">
               Engineering the future of{" "}
               <span className="text-primary italic">modern business.</span>
             </h1>
@@ -34,7 +34,7 @@ export default function About() {
       </section>
 
       {/* Firm Identity */}
-      <section className="py-24 relative overflow-hidden">
+      <section className="py-16 md:py-24 relative overflow-hidden">
         {/* Background ambient glow */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[150px] pointer-events-none"></div>
 
@@ -61,7 +61,7 @@ export default function About() {
                     <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
                     Genesis
                   </div>
-                  <h2 className="text-4xl md:text-5xl font-bold font-headline text-primary">
+                  <h2 className="text-3xl md:text-5xl font-bold font-headline text-primary">
                     The Herambh Story
                   </h2>
                   <p className="text-slate-700 dark:text-slate-300 text-lg md:text-xl leading-relaxed">
@@ -213,7 +213,7 @@ export default function About() {
       </section>
 
       {/* Leadership Section */}
-      <section className="px-6 py-24 max-w-[100rem] mx-auto">
+      <section className="px-6 py-16 md:py-24 max-w-[100rem] mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold font-headline text-slate-900 dark:text-white">
             Leadership
@@ -237,7 +237,7 @@ export default function About() {
           {/* Description */}
           <div className="w-full md:w-3/5">
             <div className="mb-8">
-              <h3 className="text-4xl md:text-5xl font-bold font-headline text-slate-900 dark:text-white mb-3">
+              <h3 className="text-3xl md:text-5xl font-bold font-headline text-slate-900 dark:text-white mb-3">
                 Vedant Golegaonkar
               </h3>
               <p className="text-primary font-bold tracking-widest uppercase text-sm inline-block px-4 py-1.5 bg-primary/10 rounded-full">

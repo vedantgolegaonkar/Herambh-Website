@@ -36,14 +36,14 @@ export default function Contact() {
   };
 
   return (
-    <main className="pt-32 pb-24 px-6 max-w-[100rem] mx-auto">
+    <main className="pt-28 md:pt-36 pb-16 md:pb-24 px-6 max-w-[100rem] mx-auto">
       {/* Hero Section */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-24">
         <div className="lg:col-span-7">
           <span className="inline-block px-4 py-1 rounded-full bg-primary/10 text-primary text-xs font-label tracking-widest uppercase mb-6">
             START THE CONVERSATION
           </span>
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-slate-900 dark:text-white mb-8 leading-[1.1]">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-slate-900 dark:text-white mb-8 leading-[1.1]">
             Let's build your next <span className="text-primary">competitive advantage.</span>{" "}
           </h1>
           <p className="text-lg text-on-surface-variant leading-relaxed max-w-xl mb-12">
@@ -151,7 +151,7 @@ export default function Contact() {
       {/* What Happens Next Section */}
       <section className="mt-32">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white mb-4">
             Our process
           </h2>
           <p className="text-on-surface-variant max-w-2xl mx-auto">
@@ -211,7 +211,7 @@ export default function Contact() {
       </section>
 
       {/* FAQ Section */}
-      <section className="mt-40 max-w-5xl mx-auto">
+      <section className="mt-24 md:mt-40 max-w-5xl mx-auto">
         <div className="flex items-center gap-4 mb-12">
           <div className="h-px flex-1 bg-gradient-to-r from-transparent to-primary/20"></div>
           <h2 className="text-3xl font-bold text-slate-900 dark:text-white">Common Inquiries</h2>

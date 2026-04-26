@@ -3,14 +3,14 @@ import Link from "next/link";
 
 export default function Services() {
   return (
-    <main className="pt-12 md:pt-16 pb-24 px-6 max-w-[100rem] mx-auto">
+    <main className="pt-28 md:pt-36 pb-16 md:pb-24 px-6 max-w-[100rem] mx-auto">
       {/* Hero Section */}
       <header className="mb-24 flex flex-col md:flex-row md:items-end justify-between gap-12">
         <div className="max-w-4xl">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-label uppercase tracking-widest mb-6">
             Our Expertise
           </div>
-          <h1 className="text-5xl md:text-7xl font-headline font-bold tracking-tight text-slate-900 dark:text-white leading-tight mb-8">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-headline font-bold tracking-tight text-slate-900 dark:text-white leading-tight mb-8">
             Premium digital solutions for ambitious businesses.{" "}
             <span className="text-primary italic">Built to Scale</span>
           </h1>
@@ -28,7 +28,7 @@ export default function Services() {
       </header>
 
       {/* Services Bento Grid */}
-      <section className="grid grid-cols-1 md:grid-cols-12 gap-6 mb-32">
+      <section className="grid grid-cols-1 md:grid-cols-12 gap-6 mb-16 md:mb-32">
         {/* Software Development */}
         <div className="md:col-span-8 group relative overflow-hidden bg-surface-container-low p-8 rounded-xl hover:scale-[1.01] transition-all duration-300">
           <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
@@ -146,7 +146,7 @@ export default function Services() {
       </section>
 
       {/* Process Section */}
-      <section className="py-24">
+      <section className="py-16 md:py-24">
         <div className="text-center mb-20">
           <h2 className="text-4xl font-headline font-bold text-slate-900 dark:text-white mb-4">
             How we work
@@ -220,7 +220,7 @@ export default function Services() {
       </section>
 
       {/* CTA Section */}
-      <section className="mt-24 rounded-2xl overflow-hidden relative">
+      <section className="mt-16 md:mt-24 rounded-2xl overflow-hidden relative">
         <div className="absolute inset-0 vitality-gradient opacity-10"></div>
         <div className="bg-surface-container-high p-12 md:p-20 text-center relative z-10 border border-black/5 dark:border-white/5">
           <h2 className="text-4xl md:text-5xl font-headline font-bold text-slate-900 dark:text-white mb-6">

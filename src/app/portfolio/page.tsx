@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Portfolio() {
   return (
-    <main className="pt-32 pb-24">
+    <main className="pt-28 md:pt-32 pb-16 md:pb-24">
       {/* Hero Section */}
       <header className="max-w-[100rem] mx-auto px-6 mb-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-end">
@@ -11,7 +11,7 @@ export default function Portfolio() {
             <span className="text-primary font-label text-xs tracking-widest uppercase mb-4 block">
               Our Work
             </span>
-            <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter leading-tight text-slate-900 dark:text-white mb-6">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter leading-tight text-slate-900 dark:text-white mb-6">
               Building products that create{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
                 Lasting Impact
@@ -127,10 +127,10 @@ export default function Portfolio() {
       </section>
 
       {/* CTA Section */}
-      <section className="mt-32 max-w-6xl mx-auto px-6">
+      <section className="mt-20 md:mt-32 max-w-6xl mx-auto px-6">
         <div className="relative overflow-hidden rounded-[2.5rem] bg-slate-900 border border-black/5 dark:border-white/5 p-12 md:p-20 text-center">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-64 h-64 bg-primary/20 blur-[100px] rounded-full"></div>
-          <h2 className="text-4xl md:text-6xl font-bold text-slate-900 dark:text-white mb-8 relative z-10 tracking-tight">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-slate-900 dark:text-white mb-8 relative z-10 tracking-tight">
             Ready to build the <span className="text-primary italic">next</span>{" "}
             digital success story?
           </h2>

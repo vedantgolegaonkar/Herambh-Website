@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <main>
       {/* Hero Section */}
-      <header className="relative pt-12 pb-24 lg:pt-28 lg:pb-40 overflow-hidden">
+      <header className="relative pt-28 pb-20 lg:pt-36 lg:pb-40 overflow-hidden">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_-20%,#004b1e44,transparent_50%)]"></div>
         <div className="max-w-[100rem] mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
           <div className="lg:col-span-7">
@@ -15,7 +15,7 @@ export default function Home() {
                 BUILDING SOFTWARE THAT MOVES BUSINESSES FORWARD
               </span>
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold font-headline leading-[1.1] mb-8 tracking-tight">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-headline leading-[1.1] mb-8 tracking-tight">
               Technology That Solves. <br />
               <span className="text-gradient">Systems That Scale.</span>
             </h1>
@@ -65,7 +65,7 @@ export default function Home() {
       </header>
 
       {/* Value Prop / Bento Grid */}
-      <section className="py-24 bg-surface-container-low">
+      <section className="py-16 lg:py-24 bg-surface-container-low">
         <div className="max-w-[100rem] mx-auto px-6">
           <div className="mb-16">
             <h2 className="text-sm font-bold text-primary uppercase tracking-[0.2em] font-label mb-4">
@@ -121,14 +121,14 @@ export default function Home() {
       </section>
 
       {/* Services Overview */}
-      <section className="py-24">
+      <section className="py-16 lg:py-24">
         <div className="max-w-[100rem] mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
             <div className="max-w-2xl">
               <h2 className="text-sm font-bold text-primary uppercase tracking-[0.2em] font-label mb-4">
                 CORE OFFERINGS
               </h2>
-              <h3 className="text-4xl md:text-5xl font-bold font-headline leading-tight">
+              <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold font-headline leading-tight">
                 Digital solutions tailored for ambitious businesses.
               </h3>
             </div>
@@ -222,7 +222,7 @@ export default function Home() {
       </section>
 
       {/* Brief About Section */}
-      <section className="py-24 bg-surface-container-low overflow-hidden">
+      <section className="py-16 lg:py-24 bg-surface-container-low overflow-hidden">
         <div className="max-w-[100rem] mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div className="relative">
@@ -247,7 +247,7 @@ export default function Home() {
               <h2 className="text-sm font-bold text-primary uppercase tracking-[0.2em] font-label mb-4">
                 Behind the Code
               </h2>
-              <h3 className="text-4xl font-bold font-headline mb-8">
+              <h3 className="text-3xl md:text-4xl font-bold font-headline mb-8">
                 Driven by business. Powered by technology.
               </h3>
               <p className="text-on-surface-variant text-lg leading-relaxed mb-8">
