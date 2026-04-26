@@ -54,9 +54,9 @@ export default function Navbar() {
         </div>
         <div className="flex items-center gap-4">
           <ThemeToggle />
-          <button className="bg-on-primary text-slate-900 dark:text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:scale-105 transition-transform duration-200">
+          <Link href="/contact" className="bg-surface-container text-surface-on-container dark:bg-on-primary dark:text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:scale-105 transition-transform duration-200 ">
             Get a Quote
-          </button>
+          </Link>
         </div>
       </div>
     </nav>
