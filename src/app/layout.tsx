@@ -28,10 +28,10 @@ export default function RootLayout({
         </ThemeProvider>
         <Analytics />
         <SpeedInsights />
-      </body>
       <GoogleTagManager
         gtmId="GTM-PR3Q4D7G"
       />
+      </body>
     </html>
   );
 }
