@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { ThemeProvider } from '../components/ThemeProvider';
 import './globals.css';
+import { GoogleTagManager } from "@next/third-parties/google";
 
 export const metadata = {
   title: 'Herambh Software Technologies and Solutions',
@@ -28,6 +29,9 @@ export default function RootLayout({
         <Analytics />
         <SpeedInsights />
       </body>
+      <GoogleTagManager
+        gtmId={process.env.NEXT_PUBLIC_GTM_ID!}
+      />
     </html>
   );
 }
