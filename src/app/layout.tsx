@@ -30,7 +30,7 @@ export default function RootLayout({
         <SpeedInsights />
       </body>
       <GoogleTagManager
-        gtmId={process.env.NEXT_PUBLIC_GTM_ID!}
+        gtmId="GTM-PR3Q4D7G"
       />
     </html>
   );
