@@ -1,6 +1,59 @@
 import { ArrowRight, ExternalLink, MessageSquare } from "lucide-react";
 import Link from "next/link";
 
+const projects = [
+  {
+    id: 1,
+    title: "Toronto Clean",
+    category: "Web Platform",
+    description: "Reliable, spotless, and professional cleaning services for residential and commercial spaces in Toronto.",
+    image: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=2070&auto=format&fit=crop", 
+    link: "https://toronto-clean.vercel.app",
+    span: "md:col-span-8",
+    aspect: "aspect-[16/9]"
+  },
+  {
+    id: 2,
+    title: "Dry Grab",
+    category: "Web Platform",
+    description: "Premium, ready-to-eat sprouted-legume snack brand founded by fitness enthusiasts. Travel-ready protein.",
+    image: "/dry-grab-thumbnail.png",
+    link: "https://dry-grab.vercel.app",
+    span: "md:col-span-4",
+    aspect: "aspect-[4/5]"
+  },
+  {
+    id: 3,
+    title: "Avaneesh Buildcare",
+    category: "Web Platform",
+    description: "Construction, specialty chemicals and waterproofing under one accountable team in Nagpur.",
+    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop", 
+    link: "https://avaneesh-buildcare.vercel.app",
+    span: "md:col-span-4",
+    aspect: "aspect-square"
+  },
+  {
+    id: 4,
+    title: "Max Care Pain Clinic",
+    category: "Web Platform",
+    description: "A multi-page website for Maxcare Pain Clinic, offering professional pain management services.",
+    image: "/maxcare-thumbnail.png", 
+    link: "https://maxcare-final.netlify.app/",
+    span: "md:col-span-8",
+    aspect: "aspect-[21/9]"
+  },
+  {
+    id: 5,
+    title: "Prahlad Maharaj Upasana",
+    category: "Mobile Application",
+    description: "Prahlad Maharaj Upasana Application - Community project.",
+    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=2070&auto=format&fit=crop", 
+    link: "https://play.google.com/store/apps/details?id=com.ramdasibana",
+    span: "md:col-span-12",
+    aspect: "aspect-[21/9]"
+  }
+];
+
 export default function Portfolio() {
   return (
     <main className="pt-28 md:pt-32 pb-16 md:pb-24">
@@ -31,98 +84,45 @@ export default function Portfolio() {
       {/* Portfolio Bento Grid */}
       <section className="max-w-[100rem] mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
-          {/* Project Card 1: Large Featured */}
-          <div className="md:col-span-8 group relative overflow-hidden rounded-2xl bg-surface-container-low transition-all duration-500 hover:scale-[1.01]">
-            <div className="aspect-[16/9] w-full relative">
-              <img
-                className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNlmfn6VRALqmvTUXUutvo3zVo7LQEtf-wer1n-GZDgpdXSpOsezzaRGMM-_Z7nqu4vdtSvbUj_Q3IoFkgCAAmh-VDBvtQJ6kBR9y4VwFn3fNFkZOC1w_meTMMjahW00C61KxZC6PoL9wvJbWB3ioCPAOnOglpMn4ljIuARZK-P0ciFKnafwyS5eXgUlYWDPSTgxRRn9sbZHltFft1wdE-2AI6U99-5SnSiJBexQNfiVjelr_hqlvPIuT4TpDKi5T-kBUK93CxGrvN"
-                alt="NeuralStream Pro"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
-            </div>
-            <div className="absolute bottom-0 left-0 p-8 w-full flex justify-between items-end">
-              <div>
-                <span className="bg-primary/10 text-primary text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest mb-3 inline-block">
-                  AI App
-                </span>
-                <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-2">
-                  NeuralStream Pro
-                </h3>
-                <p className="text-slate-600 dark:text-slate-400 max-w-xs">
-                  Real-time predictive analytics platform for global supply
-                  chains.
-                </p>
+          {projects.map((project) => (
+            <div
+              key={project.id}
+              className={`${project.span} group relative overflow-hidden rounded-2xl bg-surface-container-low transition-all duration-500 hover:scale-[1.01]`}
+            >
+              <div className={`${project.aspect} w-full relative`}>
+                <img
+                  className="w-full h-full object-cover"
+                  src={project.image}
+                  alt={project.title}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
               </div>
-              <button className="flex items-center gap-2 text-slate-900 dark:text-white bg-black/10 dark:bg-white/10 backdrop-blur-md px-6 py-3 rounded-xl hover:bg-primary hover:text-on-primary transition-all group/btn">
-                <span className="font-semibold">View Demo</span>
-                <ArrowRight className="text-sm group-hover/btn:translate-x-1 transition-transform" />
-              </button>
-            </div>
-          </div>
-
-          {/* Project Card 2: Medium Vertical */}
-          <div className="md:col-span-4 group relative overflow-hidden rounded-2xl bg-surface-container-low transition-all duration-500 hover:scale-[1.01]">
-            <div className="aspect-[4/5] w-full relative">
-              <img
-                className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNF2S_1JrT_6hBAeTNpcWVkzXMvy7rj1r7NX3e0JWJa-glz4G5RuXQQQSXjKdoXV8gwyBWcWyEMTinWAIWn41GZLBVaVNomNMAcRw8deB5dV2KZ9zC4VQM2wC79uZMZSPEJI-o24FRfvDdMhfFNMTWCDBrL_S6hNAHeQvR3LMu2STT3BvQgbYJqxkxadYZPrNijy9NohVIjJFMqWi8XcgM9CN0XEYMsefR7q1kJM2izeKqqXkiGl4gWXiY_tlrSOMZHpYDO-eXII1u"
-                alt="Vault86"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
-            </div>
-            <div className="absolute bottom-0 left-0 p-8">
-              <span className="bg-primary/10 text-primary text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest mb-3 inline-block">
-                Fintech
-              </span>
-              <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">Vault86</h3>
-              <p className="text-slate-600 dark:text-slate-400 text-sm">
-                Next-gen asset management with biometrically secured cold
-                storage.
-              </p>
-            </div>
-          </div>
-
-          {/* Project Card 3: Small Square */}
-          <div className="md:col-span-4 group relative overflow-hidden rounded-2xl bg-surface-container-low transition-all duration-500 hover:scale-[1.01]">
-            <div className="aspect-square w-full relative">
-              <img
-                className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrvm33IAEX11d4a7ofb9EW4SQBnGAf55JuzYaiJDWUZ9lzMkyenE9wgRjwptU811kdycYDJvneAffi-REZpgbt5BPIKL6R50RRyqy80xiIUJAIiFlMWnz9OVbLgYGLoEhzAvDhg7agdBn8-0hovrLOGONVfNiohaF4biGCtrmbdn_sI5HDUzfjD_Q3us3-Xgvw2UR5HVEGuCprRE5vmJwA95i4jsBXTiMiNskPZHaVtwrdXS_q-_VTYzKbB84N4c-n8OwEUkpyghoo"
-                alt="Ethereal OS"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
-            </div>
-            <div className="absolute bottom-0 left-0 p-6">
-              <span className="bg-primary/10 text-primary text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest mb-2 inline-block">
-                Web Platform
-              </span>
-              <h3 className="text-xl font-bold text-slate-900 dark:text-white">Ethereal OS</h3>
-            </div>
-          </div>
-
-          {/* Project Card 4: Horizontal Rect */}
-          <div className="md:col-span-8 group relative overflow-hidden rounded-2xl bg-surface-container-low transition-all duration-500 hover:scale-[1.01]">
-            <div className="aspect-[21/9] w-full relative">
-              <img
-                className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6X_pMdeVIDW-8N8yH7_HbZrDoxxvJemOg9W6z0LPENJzFn1wCllg62VWw0bATa8HbSFQAupYJ2CFhS-9rFcMnqjxPN3aR1oLTOElJaZ4pKg2YTwCe3LPemOZnrBuo_FrfgcQs6vq1tAHyx27Ak0aLJTSbS5KDPHQ6kiOYFyHhpsWI4KJnojJAYV1WdvFDiqidRi9CcI9nHTLmhsBPImxYNQytKqn41o026a0NmcaL63bYOH4iqvwFkICeqT_4i4TJTf5vS6LeXsCO"
-                alt="Titan Cloud"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
-            </div>
-            <div className="absolute bottom-0 left-0 p-8 w-full flex justify-between items-end">
-              <div>
-                <span className="bg-primary/10 text-primary text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest mb-2 inline-block">
-                  Infrastructure
-                </span>
-                <h3 className="text-2xl font-bold text-slate-900 dark:text-white">Titan Cloud</h3>
+              <div className="absolute bottom-0 left-0 p-8 w-full flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
+                <div>
+                  <span className="bg-primary/10 text-primary text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest mb-3 inline-block">
+                    {project.category}
+                  </span>
+                  <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-2">
+                    {project.title}
+                  </h3>
+                  <p className="text-slate-200 dark:text-slate-300 max-w-sm line-clamp-2">
+                    {project.description}
+                  </p>
+                </div>
+                {project.link && (
+                  <Link
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex shrink-0 items-center gap-2 text-slate-900 dark:text-white bg-black/10 dark:bg-white/10 backdrop-blur-md px-6 py-3 rounded-xl hover:bg-primary hover:text-on-primary transition-all group/btn"
+                  >
+                    <span className="font-semibold">Visit Site</span>
+                    <ExternalLink className="text-sm group-hover/btn:-translate-y-1 group-hover/btn:translate-x-1 transition-transform" />
+                  </Link>
+                )}
               </div>
-              <button className="bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 text-slate-900 dark:text-white p-3 rounded-full hover:bg-primary transition-colors">
-                <ExternalLink className="" />
-              </button>
             </div>
-          </div>
+          ))}
         </div>
       </section>
 
